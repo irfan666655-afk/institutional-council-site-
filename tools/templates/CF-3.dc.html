@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Carousel 3: The ruler shrinks</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,700&amp;family=IBM+Plex+Sans:wght@500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#f0cf6a}a:hover{color:#ffe29a}
+</style>
+</helmet>
+<div style="width: 1080px; height: 1350px; position: relative; overflow: hidden; background: #08080b; font-family: 'IBM Plex Sans', system-ui, sans-serif; color: #f1eadc">
+<div aria-hidden="true" style="position: absolute; left: 50%; top: 380px; width: 1200px; height: 1200px; margin-left: -600px; border-radius: 50%; background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0) 62%)"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(240,207,106,0.03) 0 2px, transparent 2px 6px)"></div>
+<div aria-hidden="true" style="position: absolute; left: 36px; top: 36px; width: 56px; height: 56px; border-top: 4px solid #d4af37; border-left: 4px solid #d4af37"></div>
+<div aria-hidden="true" style="position: absolute; right: 36px; top: 36px; width: 56px; height: 56px; border-top: 4px solid #d4af37; border-right: 4px solid #d4af37"></div>
+<div aria-hidden="true" style="position: absolute; left: 36px; bottom: 36px; width: 56px; height: 56px; border-bottom: 4px solid #d4af37; border-left: 4px solid #d4af37"></div>
+<div aria-hidden="true" style="position: absolute; right: 36px; bottom: 36px; width: 56px; height: 56px; border-bottom: 4px solid #d4af37; border-right: 4px solid #d4af37"></div>
+<div style="position: absolute; left: 90px; right: 90px; top: 74px; display: flex; justify-content: space-between; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; letter-spacing: 0.18em; color: #d4af37">
+<span>BRIEFING · ACCESS GRANTED</span><span style="color: #a39d90">3 / 5</span>
+</div>
+<div style="position: absolute; left: 90px; right: 90px; top: 200px; display: flex; flex-direction: column; gap: 26px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; letter-spacing: 0.16em; color: #d4af37">02 · FROM PARTS I–II</div>
+<h2 style="margin: 0; font-family: 'Noto Serif', Georgia, serif; font-size: 92px; line-height: 1.06; letter-spacing: -0.015em; color: #f1eadc">Prices don't rise.<br><span style="color: #f0cf6a">The ruler shrinks.</span></h2>
+</div>
+<div aria-hidden="true" style="position: absolute; left: 90px; top: 580px; width: 900px; display: flex; flex-direction: column; gap: 22px">
+<div style="height: 64px; width: 900px; border-radius: 6px; background-color: #d4af37; background-image: repeating-linear-gradient(90deg, #3b2a08 0 3px, transparent 3px 45px); background-size: 45px 26px; background-repeat: repeat-x"></div>
+<div style="height: 64px; width: 594px; border-radius: 6px; background-color: #a8741c; background-image: repeating-linear-gradient(90deg, #2a1d06 0 3px, transparent 3px 29.7px); background-size: 29.7px 26px; background-repeat: repeat-x"></div>
+<div style="height: 64px; width: 252px; border-radius: 6px; background-color: #6b4a12; background-image: repeating-linear-gradient(90deg, #1c1404 0 3px, transparent 3px 12.6px); background-size: 12.6px 26px; background-repeat: repeat-x"></div>
+</div>
+<p style="position: absolute; left: 90px; right: 90px; top: 880px; margin: 0; font-size: 34px; line-height: 1.45; color: #cfc7b6">With no fixed anchor, money can be issued without limit. What feels like prices going up is often <strong style="color: #f1eadc">the measuring stick getting shorter.</strong></p>
+<div style="position: absolute; left: 90px; right: 90px; bottom: 74px; display: flex; justify-content: flex-end; align-items: center; font-size: 24px">
+<span style="display: flex; align-items: center; gap: 14px; font-weight: 700; letter-spacing: 0.14em; color: #f0cf6a">SWIPE
+<svg aria-hidden="true" width="44" height="24" viewBox="0 0 44 24" fill="none" stroke="#f0cf6a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h38M30 3l10 9-10 9"/></svg></span>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

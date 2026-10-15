@@ -1,0 +1,46 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-15T04:50:00+05:00"},
+  "title": "The Gold Council Pre-Hype Kit",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "designSystems": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1080, "h": 1080, "radius": 540, "title": "Profile picture · new theme"},
+    "HL-Start.dc.html": {"x": 1160, "y": 0, "w": 1080, "h": 1080, "radius": 540, "title": "Highlight · Start here"},
+    "HL-File.dc.html": {"x": 2320, "y": 0, "w": 1080, "h": 1080, "radius": 540, "title": "Highlight · Fragments"},
+    "HL-Briefs.dc.html": {"x": 3480, "y": 0, "w": 1080, "h": 1080, "radius": 540, "title": "Highlight · Briefs"},
+    "PH1-Anchor.dc.html": {"x": 0, "y": 1500, "w": 1080, "h": 1350, "title": "Day 1 · Fragment 01 · 33%"},
+    "PH2-Question.dc.html": {"x": 1160, "y": 1500, "w": 1080, "h": 1350, "title": "Day 4 · Fragment 02 · 66%"},
+    "PH3-Countdown.dc.html": {"x": 2320, "y": 1500, "w": 1080, "h": 1350, "title": "Day 6 · Fragment 03 · decrypted"},
+    "CF-1.dc.html": {"x": 0, "y": 3270, "w": 1080, "h": 1350, "title": "Carousel · 1 cover"},
+    "CF-2.dc.html": {"x": 1160, "y": 3270, "w": 1080, "h": 1350, "title": "Carousel · 2 the anchor"},
+    "CF-3.dc.html": {"x": 2320, "y": 3270, "w": 1080, "h": 1350, "title": "Carousel · 3 the ruler"},
+    "CF-4.dc.html": {"x": 3480, "y": 3270, "w": 1080, "h": 1350, "title": "Carousel · 4 what we do"},
+    "CF-5.dc.html": {"x": 4640, "y": 3270, "w": 1080, "h": 1350, "title": "Carousel · 5 free"},
+    "R1-Cover.dc.html": {"x": 0, "y": 5040, "w": 1080, "h": 1920, "title": "Day 2 · Reel cover · The night the anchor was cut"},
+    "R2-Cover.dc.html": {"x": 1160, "y": 5040, "w": 1080, "h": 1920, "title": "Day 5 · Reel cover · Your money has a ruler"},
+    "S1-Poll.dc.html": {"x": 2320, "y": 5040, "w": 1080, "h": 1920, "title": "Day 4 · Story poll"},
+    "GL-Left.dc.html": {"x": 0, "y": 7680, "w": 1080, "h": 1350, "title": "Grid row · left · Escape"},
+    "GL-ReelCover.dc.html": {"x": 1160, "y": 7680, "w": 1080, "h": 1920, "title": "Grid row · centre · reel cover"},
+    "GL-Right.dc.html": {"x": 2320, "y": 7680, "w": 1080, "h": 1350, "title": "Grid row · right · Matrix"}
+  },
+  "order": [
+    "Main.dc.html", "HL-Start.dc.html", "HL-File.dc.html", "HL-Briefs.dc.html",
+    "PH1-Anchor.dc.html", "PH2-Question.dc.html", "PH3-Countdown.dc.html",
+    "CF-1.dc.html", "CF-2.dc.html", "CF-3.dc.html", "CF-4.dc.html", "CF-5.dc.html",
+    "R1-Cover.dc.html", "R2-Cover.dc.html", "S1-Poll.dc.html",
+    "GL-Left.dc.html", "GL-ReelCover.dc.html", "GL-Right.dc.html"
+  ],
+  "notes": {
+    "t-profile": {"kind": "title1", "x": 0, "y": -300, "text": "Matrix theme, upgraded · profile and highlights", "maxW": 4560},
+    "t-posts": {"kind": "title1", "x": 0, "y": 1200, "text": "Fragments 01 to 03 · decrypting before the teaser", "maxW": 3400},
+    "t-carousel": {"kind": "title1", "x": 0, "y": 2970, "text": "Carousel · Day 3 · Read this before the file opens", "maxW": 5720},
+    "t-reels": {"kind": "title1", "x": 0, "y": 4740, "text": "Reels and story", "maxW": 3400},
+    "t-grid": {"kind": "title1", "x": 0, "y": 7380, "text": "Grid row · Escape · trailer reel · Matrix", "maxW": 3400},
+    "schedule": {"x": 3480, "y": 1500, "w": 900, "fill": "orange", "size": "m", "text": "7-DAY PRE-HYPE SCHEDULE (Pakistan time)\n\nDay 0 (tonight): swap profile picture + 3 highlight covers. Archive nothing yet.\nDay 1 · 8 pm: Post · Case File 001\nDay 2 · 8 pm: Reel 1 · The night the anchor was cut\nDay 3 · 8 pm: Carousel · Read this before the file opens (5 slides)\nDay 4 · 1 pm: Story poll · 8 pm: Post · The question\nDay 5 · 8 pm: Reel 2 · Your money has a ruler\nDay 6 · 8 pm: Post · The file opens + Instagram countdown sticker in story\nDay 7: Escape the Matrix TEASER reel drops\nDay 8+: existing Launch Kit posts P1 to P6 in order\n\nEvery post: reply to every comment in the first 60 minutes. Pin Case File 001, the carousel and the teaser to the top of the grid."},
+    "captions": {"x": 4460, "y": 1500, "w": 1100, "fill": "green", "size": "s", "text": "CAPTIONS\n\nCASE FILE 001\nOn 15 August 1971, the US dollar stopped being redeemable in gold. It was called temporary. It was never reversed.\nEverything you earn since then is measured with a ruler that nobody fixed in place.\nThe file opens soon.\n#EscapeTheMatrix #TheGoldCouncil #Gold #MoneyHistory #BrettonWoods\n\nREEL 1\n15 August 1971. One TV address. The anchor was cut. Watch till the end.\n#EscapeTheMatrix #Gold #XAUUSD #NixonShock #FinancialEducation\n\nCAROUSEL\nFive slides to read before Escape the Matrix. Save this, you will want it later.\n#EscapeTheMatrix #TheGoldCouncil #GoldEducation #Inflation\n\nTHE QUESTION\nOne word in the comments. We read every answer before the file opens.\n#EscapeTheMatrix #TheGoldCouncil #Gold\n\nREEL 2\nPrices are not rising. Your ruler is shrinking. 20 seconds.\n#EscapeTheMatrix #Gold #PurchasingPower #XAUUSD\n\nTHE FILE OPENS\n[N] days. Turn on post notifications so you see it first.\n#EscapeTheMatrix #TheGoldCouncil\n\nEvery caption ends with: Education only. Not financial advice."},
+    "reel1": {"x": 3480, "y": 5040, "w": 760, "fill": "teal", "size": "s", "text": "REEL 1 SCRIPT · 20 s · The night the anchor was cut\n\n0-2 s · Cover frame. On screen: CASE FILE 001. Sound: paper slide, low hum.\n2-6 s · Old TV static, a 1971 calendar page flips to 15 AUGUST. Text: Sunday night. One TV address.\n6-10 s · A gold bar on a desk, a chain to a dollar note snaps. Text: The dollar's link to gold was cut.\n10-14 s · Stamp hits paper: TEMPORARY. Pause. Second stamp across it: NEVER REVERSED.\n14-18 s · Ruler on a desk, slowly shortening. Text: Since then, your money has had no fixed ruler.\n18-20 s · Black. Text: Escape the Matrix. The file opens soon.\n\nVO (optional, calm): One Sunday night in 1971, money lost its anchor. It was called temporary. Look how long temporary has lasted.\nUse archival-style footage only from sources you have rights to, or generate it in the Veo 3 pipeline."},
+    "reel2": {"x": 4320, "y": 5040, "w": 760, "fill": "teal", "size": "s", "text": "REEL 2 SCRIPT · 18 s · Your money has a ruler\n\n0-2 s · Hook text on cover: YOUR MONEY HAS A RULER.\n2-6 s · Hand measures a loaf of bread with a ruler marked in rupees. Text: You measure everything in money.\n6-10 s · The ruler's marks squeeze closer together. Text: But the ruler itself keeps shrinking.\n10-14 s · Same bread, a gold-marked ruler beside it that stays still. Text: Gold is the ruler we use to check.\n14-18 s · Text: Not a promise. A measurement. Escape the Matrix. Soon.\n\nNo price claims on screen. If you add a number, add its source in the caption."}
+  }
+}

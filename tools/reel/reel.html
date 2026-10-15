@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Escape the Matrix trailer reel</title>
+__FONTS__
+<style>
+body{margin:0;background:#050507}
+#stage{width:1080px;height:1920px;position:relative;overflow:hidden;background:#050507;font-family:'IBM Plex Sans',sans-serif;color:#f1eadc}
+.col{position:absolute;top:0;width:22px;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:34px;line-height:1.1;word-break:break-all}
+.scene{position:absolute;left:0;right:0;top:0;bottom:0;opacity:0}
+.mono{font-family:'JetBrains Mono',monospace;font-weight:700}
+.serif{font-family:'Noto Serif',Georgia,serif;font-weight:700}
+.glitch{text-shadow:-6px 0 rgba(95,211,196,.55),6px 0 rgba(224,90,79,.55)}
+.abs{position:absolute}
+.corner{position:absolute;width:70px;height:70px;border-color:#d4af37;border-style:solid;border-width:0}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="rain"></div>
+  <div class="abs" style="inset:0;background:radial-gradient(ellipse 74% 36% at 50% 50%,rgba(5,5,7,.97) 0%,rgba(5,5,7,.72) 60%,rgba(5,5,7,.28) 100%)"></div>
+  <div class="abs" style="inset:0;background:repeating-linear-gradient(0deg,rgba(240,207,106,.035) 0 2px,transparent 2px 6px)"></div>
+  <div id="band" class="abs" style="left:0;right:0;height:0;background:rgba(95,211,196,.18)"></div>
+
+  <div class="corner" style="left:40px;top:280px;border-top-width:5px;border-left-width:5px"></div>
+  <div class="corner" style="right:40px;top:280px;border-top-width:5px;border-right-width:5px"></div>
+  <div class="corner" style="left:40px;bottom:280px;border-bottom-width:5px;border-left-width:5px"></div>
+  <div class="corner" style="right:40px;bottom:280px;border-bottom-width:5px;border-right-width:5px"></div>
+
+  <div class="abs mono" style="left:100px;right:100px;top:380px;display:flex;justify-content:space-between;align-items:center;font-size:28px;letter-spacing:.2em;color:#d4af37">
+    <span style="display:flex;align-items:center;gap:14px"><span id="rec" style="width:18px;height:18px;border-radius:50%;background:#e05a4f"></span>REC</span>
+    <span style="color:#a39d90">THE GOLD COUNCIL</span>
+  </div>
+  <div id="tc" class="abs mono" style="left:100px;right:100px;top:1540px;display:flex;justify-content:space-between;font-size:26px;letter-spacing:.14em;color:#8f8a7e"><span>FILE · ESCAPE THE MATRIX</span><span id="tcv">00:00:00</span></div>
+
+  <div id="s1" class="scene">
+    <div id="s1t" class="abs mono" style="left:100px;top:820px;font-size:46px;letter-spacing:.16em;color:#f0cf6a"></div>
+    <div class="abs" style="left:100px;top:920px;width:880px;height:10px;border-radius:5px;background:#1a1b20;overflow:hidden"><div id="s1bar" style="height:100%;width:0;background:#d4af37"></div></div>
+    <div id="s1p" class="abs mono" style="left:100px;top:960px;font-size:30px;letter-spacing:.14em;color:#a39d90">DECRYPTING 0%</div>
+  </div>
+
+  <div id="s2" class="scene">
+    <div id="s2d" class="abs mono glitch" style="left:100px;top:700px;font-size:128px;line-height:1;color:#f0cf6a">15·08·1971</div>
+    <div id="s2t" class="abs serif" style="left:100px;right:100px;top:900px;font-size:92px;line-height:1.08;letter-spacing:-.02em;color:#f1eadc"></div>
+  </div>
+
+  <div id="s3" class="scene">
+    <div class="abs mono" style="left:100px;top:700px;font-size:34px;letter-spacing:.24em;color:#a39d90">IT WAS CALLED</div>
+    <div class="abs mono" style="left:100px;top:780px;font-size:116px;line-height:1;color:#8f8a7e">TEMPORARY
+      <div id="s3s" style="position:absolute;left:-10px;top:52%;height:10px;width:0;background:#e05a4f"></div></div>
+    <div id="s3n" class="abs mono" style="left:100px;top:960px;font-size:100px;line-height:1;color:#e05a4f;transform-origin:left center;opacity:0">NEVER<br>REVERSED</div>
+  </div>
+
+  <div id="s4" class="scene">
+    <div id="s4t" class="abs serif" style="left:100px;right:100px;top:640px;font-size:84px;line-height:1.08;letter-spacing:-.02em;color:#f1eadc"></div>
+    <div id="s4r" class="abs" style="left:100px;top:1010px;height:96px;width:880px;border-radius:8px;background-color:#d4af37;background-repeat:repeat-x"></div>
+    <div class="abs mono" style="left:100px;top:1140px;font-size:28px;letter-spacing:.2em;color:#a39d90">THE MEASURING STICK</div>
+  </div>
+
+  <div id="s5" class="scene">
+    <div id="s5a" class="abs" style="left:0;right:0;top:760px;text-align:center;opacity:0"><div class="serif glitch" style="font-size:170px;line-height:1;color:#f0cf6a">10 parts.</div><div class="mono" style="margin-top:40px;font-size:32px;letter-spacing:.3em;color:#a39d90">ONE DOCUMENTARY</div></div>
+    <div id="s5b" class="abs" style="left:0;right:0;top:760px;text-align:center;opacity:0"><div class="serif glitch" style="font-size:170px;line-height:1;color:#f0cf6a">6 faiths.</div><div class="mono" style="margin-top:40px;font-size:32px;letter-spacing:.3em;color:#a39d90">ONE WARNING</div></div>
+    <div id="s5c" class="abs" style="left:0;right:0;top:760px;text-align:center;opacity:0"><div class="serif glitch" style="font-size:170px;line-height:1;color:#f0cf6a">6 worlds.</div><div class="mono" style="margin-top:40px;font-size:32px;letter-spacing:.3em;color:#a39d90">ONE PLAYBOOK</div></div>
+  </div>
+
+  <div id="s6" class="scene">
+    <div id="s6a" class="abs mono" style="left:0;right:0;top:640px;text-align:center;font-size:32px;letter-spacing:.34em;color:#cfc7b6;opacity:0">THE DOCUMENTARY</div>
+    <div id="s6b" class="abs serif" style="left:0;right:0;top:720px;text-align:center;font-size:196px;line-height:1;letter-spacing:-.01em;color:#f0cf6a;opacity:0">ESCAPE</div>
+    <div id="s6c" class="abs serif" style="left:0;right:0;top:940px;text-align:center;font-size:84px;line-height:1;letter-spacing:.4em;color:#f1eadc;opacity:0;padding-left:.4em">THE</div>
+    <div id="s6d" class="abs serif" style="left:0;right:0;top:1040px;text-align:center;font-size:196px;line-height:1;letter-spacing:-.01em;color:#f0cf6a"></div>
+    <div id="s6e" class="abs mono" style="left:0;right:0;top:1300px;text-align:center;font-size:36px;letter-spacing:.3em;color:#f1eadc;opacity:0;padding-left:.3em">COMING SOON</div>
+    <div id="s6f" class="abs mono" style="left:0;right:0;top:1370px;text-align:center;font-size:30px;letter-spacing:.08em;color:#d4af37;opacity:0">@the.goldcouncil</div>
+  </div>
+</div>
+<script>
+const W=1080,H=1920,FPS=30,DUR=18;
+const GLYPHS="$₨€¥₿%0123456789";
+function rnd(n){const x=Math.sin(n*127.1+311.7)*43758.5453;return x-Math.floor(x);}
+function clamp(v,a=0,b=1){return Math.max(a,Math.min(b,v));}
+function ease(v){v=clamp(v);return v<.5?4*v*v*v:1-Math.pow(-2*v+2,3)/2;}
+function fade(t,a,b,f=.25){return clamp((t-a)/f)*clamp((b-t)/f);}
+function type(s,t,start,dur){return s.slice(0,Math.floor(clamp((t-start)/dur)*s.length));}
+const $=id=>document.getElementById(id);
+
+// rain columns
+const rain=$("rain"),cols=[];
+for(let i=0;i<13;i++){
+  const d=document.createElement("div");d.className="col";
+  let s="";for(let k=0;k<64;k++)s+=GLYPHS[Math.floor(rnd(i*97+k)*GLYPHS.length)];
+  d.textContent=s;d.style.left=(20+i*80)+"px";
+  d.style.color=i%3===1?"rgba(95,211,196,.12)":"rgba(212,175,55,.17)";
+  rain.appendChild(d);cols.push({el:d,speed:90+rnd(i)*140,off:rnd(i+50)*2400});
+}
+const CUTS=[2.6,5.6,8.6,11.8,14.4];
+
+function render(t){
+  const f=Math.round(t*FPS);
+  cols.forEach(c=>{const y=((t*c.speed+c.off)%2500)-2300;c.el.style.transform=`translateY(${y}px)`;});
+  $("rec").style.opacity=(Math.floor(t*2)%2===0)?1:0.15;
+  const s=Math.floor(t),fr=f%FPS;
+  $("tcv").textContent=`00:${String(s).padStart(2,"0")}:${String(fr).padStart(2,"0")}`;
+
+  // glitch at cuts
+  let g=0;CUTS.forEach(c=>{if(Math.abs(t-c)<0.07)g=1;});
+  const band=$("band");
+  if(g){band.style.top=(300+rnd(f)*1300)+"px";band.style.height=(20+rnd(f+3)*90)+"px";$("stage").style.transform=`translateX(${(rnd(f+7)-.5)*24}px)`;}
+  else{band.style.height="0";$("stage").style.transform="none";}
+
+  // S1
+  $("s1").style.opacity=fade(t,0,2.6,.2);
+  $("s1t").textContent=type("INCOMING SIGNAL",t,.2,1.0)+((Math.floor(t*4)%2)?"_":" ");
+  const p=clamp((t-.5)/1.7);$("s1bar").style.width=(p*100)+"%";
+  $("s1p").textContent=p<1?`DECRYPTING ${Math.round(p*100)}%`:"SIGNAL DECRYPTED";
+  $("s1p").style.color=p<1?"#a39d90":"#f0cf6a";
+
+  // S2
+  $("s2").style.opacity=fade(t,2.6,5.6);
+  const j=(t>2.6&&t<3.1)?(rnd(f)-.5)*40:0;$("s2d").style.transform=`translateX(${j}px)`;
+  $("s2t").innerHTML=(()=>{const s="The night money lost its anchor.";const n=type(s,t,3.2,1.3).length;
+    const a=s.slice(0,n);const k=a.indexOf("anchor.");return k<0?a:a.slice(0,k)+`<span style="color:#f0cf6a">${a.slice(k)}</span>`;})();
+
+  // S3
+  $("s3").style.opacity=fade(t,5.6,8.6);
+  $("s3s").style.width=(ease((t-6.5)/.4)*(660))+"px";
+  const n=clamp((t-7.0)/.2);$("s3n").style.opacity=n;$("s3n").style.transform=`scale(${1.4-.4*ease(n)})`;
+
+  // S4
+  $("s4").style.opacity=fade(t,8.6,11.8);
+  $("s4t").innerHTML=(()=>{const s="Since then, the ruler keeps shrinking.";const n=type(s,t,8.7,1.4).length;const a=s.slice(0,n);
+    const k=a.indexOf("keeps");return k<0?a:a.slice(0,k)+`<span style="color:#f0cf6a">${a.slice(k)}</span>`;})();
+  const r=ease((t-9.4)/2.0),w=880-620*r,r4=$("s4r");
+  r4.style.width=w+"px";
+  const c1=[212,175,55],c2=[107,74,18],col=c1.map((v,i)=>Math.round(v+(c2[i]-v)*r));
+  r4.style.backgroundColor=`rgb(${col})`;
+  r4.style.backgroundImage=`repeating-linear-gradient(90deg,#2a1d06 0 3px,transparent 3px ${w/20}px)`;
+  r4.style.backgroundSize=`${w/20}px 36px`;
+
+  // S5
+  $("s5").style.opacity=fade(t,11.8,14.4,.15);
+  [["s5a",11.8,12.65],["s5b",12.65,13.5],["s5c",13.5,14.4]].forEach(([id,a,b])=>{
+    const e=$(id);e.style.opacity=fade(t,a,b,.08);
+    const jj=(t>a&&t<a+.14)?(rnd(f+a*10)-.5)*50:0;e.style.transform=`translateX(${jj}px)`;});
+
+  // S6
+  $("s6").style.opacity=clamp((t-14.4)/.2);
+  const o=v=>clamp(v/.35);
+  $("s6a").style.opacity=o(t-14.5);
+  $("s6b").style.opacity=o(t-14.6);$("s6b").style.transform=`translateY(${40*(1-ease((t-14.6)/.4))}px)`;
+  $("s6c").style.opacity=o(t-14.9);
+  const word="MATRIX";let h="";
+  for(let i=0;i<word.length;i++){
+    const lock=15.1+i*.16;
+    if(t<15.0) h+=`<span style="opacity:0">${word[i]}</span>`;
+    else if(t<lock){const gch=GLYPHS[Math.floor(rnd(f*7+i)*GLYPHS.length)];h+=`<span class="mono" style="display:inline-block;width:.72em;color:#5fd3c4">${gch}</span>`;}
+    else h+=`<span style="display:inline-block">${word[i]}</span>`;
+  }
+  $("s6d").innerHTML=h;
+  $("s6d").className="abs serif"+(t>16.1?" glitch":"");
+  $("s6e").style.opacity=o(t-16.4);
+  $("s6f").style.opacity=o(t-16.7);
+}
+render(0);
+</script>
+</body>
+</html>

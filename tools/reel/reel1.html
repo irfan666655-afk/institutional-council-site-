@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Reel 1: The night the anchor was cut</title>
+__FONTS__
+<link rel="stylesheet" href="base.css">
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div id="s1t" class="abs mono" style="left:100px;top:820px;font-size:52px;letter-spacing:.14em;color:#f0cf6a"></div>
+    <div class="abs" style="left:100px;top:920px;width:880px;height:10px;border-radius:5px;background:#1a1b20;overflow:hidden"><div id="s1bar" style="height:100%;width:0;background:#d4af37"></div></div>
+    <div id="s1p" class="abs mono" style="left:100px;top:960px;font-size:30px;letter-spacing:.14em;color:#a39d90">OPENING FILE</div>
+  </div>
+  <div id="s2" class="scene">
+    <div class="abs mono" style="left:100px;top:660px;font-size:34px;letter-spacing:.24em;color:#a39d90">SUNDAY NIGHT</div>
+    <div id="s2d" class="abs serif glitch" style="left:100px;top:730px;font-size:150px;line-height:1;color:#f0cf6a">15 August<br>1971</div>
+    <div id="s2t" class="abs serif" style="left:100px;right:100px;top:1100px;font-size:70px;line-height:1.1;color:#f1eadc"></div>
+  </div>
+  <div id="s3" class="scene">
+    <div id="s3h" class="abs mono" style="left:100px;top:640px;font-size:34px;letter-spacing:.24em;color:#a39d90">BEFORE THAT NIGHT</div>
+    <div class="abs" style="left:100px;top:760px;width:300px;height:180px;border:4px dashed #8f8a7e;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(18,19,24,.9)"><span class="mono" style="font-size:40px;color:#cfc7b6">US $</span></div>
+    <div class="abs" style="left:680px;top:760px;width:300px;height:180px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#d4af37"><span class="mono" style="font-size:40px;color:#2a1d06">GOLD</span></div>
+    <div id="linkL" class="abs" style="left:400px;top:844px;height:12px;width:140px;background:#f0cf6a"></div>
+    <div id="linkR" class="abs" style="left:540px;top:844px;height:12px;width:140px;background:#f0cf6a"></div>
+    <div id="s3a" class="abs" style="left:100px;right:100px;top:1010px;opacity:0"><div class="mono" style="font-size:84px;color:#f0cf6a">$35 = 1 oz</div><div style="margin-top:20px;font-size:36px;line-height:1.35;color:#cfc7b6">Foreign governments could swap dollars for gold at a fixed rate.</div></div>
+    <div id="s3b" class="abs serif" style="left:100px;right:100px;top:1040px;font-size:96px;line-height:1.05;color:#f1eadc"></div>
+  </div>
+  <div id="s4" class="scene">
+    <div class="abs mono" style="left:100px;top:700px;font-size:34px;letter-spacing:.24em;color:#a39d90">IT WAS CALLED</div>
+    <div class="abs mono" style="left:100px;top:780px;font-size:116px;line-height:1;color:#8f8a7e">TEMPORARY<div id="s4s" style="position:absolute;left:-10px;top:52%;height:10px;width:0;background:#e05a4f"></div></div>
+    <div id="s4n" class="abs mono" style="left:100px;top:960px;font-size:100px;line-height:1;color:#e05a4f;transform-origin:left center;opacity:0">NEVER<br>REVERSED</div>
+  </div>
+  <div id="s5" class="scene">
+    <div id="s5t" class="abs serif" style="left:100px;right:100px;top:720px;font-size:96px;line-height:1.06;letter-spacing:-.02em;color:#f1eadc"></div>
+  </div>
+  <div id="s6" class="scene">
+    <div id="s6a" class="abs mono" style="left:0;right:0;top:640px;text-align:center;font-size:32px;letter-spacing:.34em;color:#cfc7b6;padding-left:.34em">THE DOCUMENTARY</div>
+    <div id="s6b" class="abs serif glitch" style="left:0;right:0;top:720px;text-align:center;font-size:170px;line-height:1;color:#f0cf6a">ESCAPE</div>
+    <div class="abs serif" style="left:0;right:0;top:910px;text-align:center;font-size:76px;letter-spacing:.4em;color:#f1eadc;padding-left:.4em">THE</div>
+    <div class="abs serif glitch" style="left:0;right:0;top:1000px;text-align:center;font-size:170px;line-height:1;color:#f0cf6a">MATRIX</div>
+    <div id="s6e" class="abs mono" style="left:0;right:0;top:1250px;text-align:center;font-size:34px;letter-spacing:.24em;color:#f1eadc;opacity:0;padding-left:.24em">COMING SOON</div>
+    <div id="s6f" class="abs mono" style="left:0;right:0;top:1320px;text-align:center;font-size:30px;color:#d4af37;opacity:0">@the.goldcouncil</div>
+  </div>
+</div>
+<script src="base.js"></script>
+<script>
+const DUR=21, CUTS=[2.6,5.6,12.0,15.6,18.6];
+buildChrome("CASE FILE 001");
+function scenes(t,f){
+  $("s1").style.opacity=fade(t,0,2.6,.2);
+  $("s1t").textContent=type("CASE FILE 001",t,.2,.8)+((Math.floor(t*4)%2)?"_":" ");
+  const p=clamp((t-.5)/1.7);$("s1bar").style.width=(p*100)+"%";
+  $("s1p").textContent=p<1?`OPENING FILE ${Math.round(p*100)}%`:"ACCESS GRANTED";$("s1p").style.color=p<1?"#a39d90":"#f0cf6a";
+
+  $("s2").style.opacity=fade(t,2.6,5.6);
+  $("s2d").style.transform=`translateX(${(t>2.6&&t<3.0)?(rnd(f)-.5)*40:0}px)`;
+  $("s2t").textContent=type("One TV address.",t,3.4,.9);
+
+  $("s3").style.opacity=fade(t,5.6,12.0);
+  $("s3a").style.opacity=clamp((t-6.3)/.3)*clamp((9.3-t)/.3);
+  const br=ease((t-9.6)/.5);
+  $("linkL").style.width=(140-90*br)+"px";
+  $("linkR").style.left=(540+90*br)+"px";$("linkR").style.width=(140-90*br)+"px";
+  ["linkL","linkR"].forEach(id=>$(id).style.background=br>0?"#e05a4f":"#f0cf6a");
+  $("s3h").textContent=t<9.6?"BEFORE THAT NIGHT":"15 AUGUST 1971";
+  $("s3b").innerHTML=gold(type("The link was cut.",t,9.9,.9),"cut.");
+
+  $("s4").style.opacity=fade(t,12.0,15.6);
+  $("s4s").style.width=(ease((t-12.9)/.4)*660)+"px";
+  const n=clamp((t-13.4)/.2);$("s4n").style.opacity=n;$("s4n").style.transform=`scale(${1.4-.4*ease(n)})`;
+
+  $("s5").style.opacity=fade(t,15.6,18.6);
+  $("s5t").innerHTML=gold(type("Since then, money has had no fixed anchor.",t,15.7,1.6),"no fixed");
+
+  $("s6").style.opacity=clamp((t-18.6)/.25);
+  $("s6b").style.transform=`translateY(${40*(1-ease((t-18.6)/.4))}px)`;
+  $("s6e").style.opacity=clamp((t-19.4)/.35);$("s6f").style.opacity=clamp((t-19.8)/.35);
+}
+render(0);
+</script></body></html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Reel 2: Your money has a ruler</title>
+__FONTS__
+<link rel="stylesheet" href="base.css">
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div class="abs mono" style="left:100px;top:640px;font-size:32px;letter-spacing:.24em;color:#a39d90">CASE FILE 002</div>
+    <div id="s1h" class="abs serif glitch" style="left:100px;right:100px;top:720px;font-size:150px;line-height:1.02;letter-spacing:-.02em;color:#f1eadc;opacity:0">Your money has a <span style="color:#f0cf6a">ruler.</span></div>
+  </div>
+  <div id="s2" class="scene">
+    <div id="s2t" class="abs serif" style="left:100px;right:100px;top:640px;font-size:76px;line-height:1.08;color:#f1eadc"></div>
+    <div id="r1" class="abs" style="left:100px;top:880px;opacity:0"><div class="mono" style="font-size:30px;letter-spacing:.2em;color:#a39d90">YOUR SALARY</div><div style="margin-top:14px;height:60px;width:880px;border-radius:6px;background-color:#d4af37;background-image:repeating-linear-gradient(90deg,#3b2a08 0 3px,transparent 3px 44px)"></div></div>
+    <div id="r2" class="abs" style="left:100px;top:1040px;opacity:0"><div class="mono" style="font-size:30px;letter-spacing:.2em;color:#a39d90">YOUR RENT</div><div style="margin-top:14px;height:60px;width:880px;border-radius:6px;background-color:#d4af37;background-image:repeating-linear-gradient(90deg,#3b2a08 0 3px,transparent 3px 44px)"></div></div>
+    <div id="r3" class="abs" style="left:100px;top:1200px;opacity:0"><div class="mono" style="font-size:30px;letter-spacing:.2em;color:#a39d90">YOUR SAVINGS</div><div style="margin-top:14px;height:60px;width:880px;border-radius:6px;background-color:#d4af37;background-image:repeating-linear-gradient(90deg,#3b2a08 0 3px,transparent 3px 44px)"></div></div>
+  </div>
+  <div id="s3" class="scene">
+    <div id="s3t" class="abs serif" style="left:100px;right:100px;top:640px;font-size:84px;line-height:1.08;color:#f1eadc"></div>
+    <div id="s3r" class="abs" style="left:100px;top:1010px;height:96px;width:880px;border-radius:8px;background-color:#d4af37;background-repeat:repeat-x"></div>
+    <div class="abs mono" style="left:100px;top:1140px;font-size:28px;letter-spacing:.2em;color:#a39d90">THE MEASURING STICK</div>
+  </div>
+  <div id="s4" class="scene">
+    <div class="abs mono" style="left:100px;top:640px;font-size:34px;letter-spacing:.24em;color:#a39d90">RUPEES PER US DOLLAR</div>
+    <div id="s4n" class="abs mono glitch" style="left:100px;top:740px;font-size:220px;line-height:1;color:#f0cf6a">3.31</div>
+    <div id="s4y" class="abs mono" style="left:100px;top:1000px;font-size:40px;letter-spacing:.12em;color:#cfc7b6">1948</div>
+    <div class="abs" style="left:100px;top:1090px;font-size:28px;color:#8f8a7e">Source: State Bank of Pakistan · interbank, Oct 2026</div>
+  </div>
+  <div id="s5" class="scene">
+    <div class="abs" style="left:390px;top:620px;width:300px;height:300px;border-radius:50%;background:#d4af37;border:10px solid #f0cf6a;box-sizing:border-box;display:flex;align-items:center;justify-content:center">
+      <div style="width:232px;height:232px;border-radius:50%;border:3px solid #8a6a18;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px"><span class="serif" style="font-size:58px;color:#2a1d06">1 TOLA</span><span class="mono" style="font-size:26px;color:#3b2a08">11.66 g</span></div></div>
+    <div id="s5t" class="abs serif" style="left:100px;right:100px;top:1010px;text-align:center;font-size:72px;line-height:1.1;color:#f1eadc"></div>
+    <div id="s5b" class="abs" style="left:100px;right:100px;top:1200px;text-align:center;font-size:36px;color:#cfc7b6;opacity:0">Gold is the ruler we check against.</div>
+  </div>
+  <div id="s6" class="scene">
+    <div class="abs mono" style="left:100px;top:660px;font-size:32px;letter-spacing:.2em;color:#d4af37">ESCAPE RULE 01</div>
+    <div id="s6t" class="abs serif" style="left:100px;right:100px;top:740px;font-size:120px;line-height:1.04;letter-spacing:-.02em;color:#f1eadc">Keep two sets <span style="color:#f0cf6a">of books.</span></div>
+    <div id="s6b" class="abs mono" style="left:100px;top:1060px;font-size:34px;letter-spacing:.08em;color:#cfc7b6;opacity:0">BOOK 1 · RUPEES &nbsp; BOOK 2 · GRAMS</div>
+    <div id="s6c" class="abs mono" style="left:100px;top:1180px;font-size:30px;color:#d4af37;opacity:0">@the.goldcouncil · #EscapeTheMatrix</div>
+  </div>
+</div>
+<script src="base.js"></script>
+<script>
+const DUR=19, CUTS=[2.8,6.2,10.0,13.4,16.4];
+buildChrome("CASE FILE 002");
+function scenes(t,f){
+  $("s1").style.opacity=fade(t,0,2.8,.2);
+  $("s1h").style.opacity=clamp((t-.3)/.2);$("s1h").style.transform=`translateX(${(t>.3&&t<.7)?(rnd(f)-.5)*40:0}px)`;
+
+  $("s2").style.opacity=fade(t,2.8,6.2);
+  $("s2t").innerHTML=gold(type("You measure everything in it.",t,2.9,1.2),"everything");
+  [["r1",4.2],["r2",4.6],["r3",5.0]].forEach(([id,a])=>{$(id).style.opacity=clamp((t-a)/.2);$(id).style.transform=`translateX(${-40*(1-ease((t-a)/.3))}px)`;});
+
+  $("s3").style.opacity=fade(t,6.2,10.0);
+  $("s3t").innerHTML=gold(type("But the ruler keeps shrinking.",t,6.3,1.3),"keeps");
+  const r=ease((t-6.8)/2.4),w=880-620*r,el=$("s3r");el.style.width=w+"px";
+  const c1=[212,175,55],c2=[107,74,18];el.style.backgroundColor=`rgb(${c1.map((v,i)=>Math.round(v+(c2[i]-v)*r))})`;
+  el.style.backgroundImage=`repeating-linear-gradient(90deg,#2a1d06 0 3px,transparent 3px ${w/20}px)`;el.style.backgroundSize=`${w/20}px 36px`;
+
+  $("s4").style.opacity=fade(t,10.0,13.4);
+  const k=ease((t-10.6)/1.8),v=3.31+(277-3.31)*k;
+  $("s4n").textContent=k<1?(v<100?v.toFixed(2):Math.round(v).toString()):"~277";
+  $("s4y").textContent="1948 → OCT 2026";
+
+  $("s5").style.opacity=fade(t,13.4,16.4);
+  $("s5t").innerHTML=gold(type("A tola is still 11.66 grams.",t,13.6,1.2),"still");
+  $("s5b").style.opacity=clamp((t-15.0)/.3);
+
+  $("s6").style.opacity=clamp((t-16.4)/.25);
+  $("s6t").style.transform=`translateY(${40*(1-ease((t-16.4)/.4))}px)`;
+  $("s6b").style.opacity=clamp((t-17.0)/.3);$("s6c").style.opacity=clamp((t-17.5)/.3);
+}
+render(0);
+</script></body></html>

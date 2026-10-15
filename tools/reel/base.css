@@ -1,0 +1,9 @@
+body{margin:0;background:#050507}
+#stage{width:1080px;height:1920px;position:relative;overflow:hidden;background:#050507;font-family:'IBM Plex Sans',sans-serif;color:#f1eadc}
+.col{position:absolute;top:0;width:22px;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:34px;line-height:1.1;word-break:break-all}
+.scene{position:absolute;left:0;right:0;top:0;bottom:0;opacity:0}
+.mono{font-family:'JetBrains Mono',monospace;font-weight:700}
+.serif{font-family:'Noto Serif',Georgia,serif;font-weight:700}
+.glitch{text-shadow:-6px 0 rgba(95,211,196,.55),6px 0 rgba(224,90,79,.55)}
+.abs{position:absolute}
+.corner{position:absolute;width:70px;height:70px;border-color:#d4af37;border-style:solid;border-width:0}
