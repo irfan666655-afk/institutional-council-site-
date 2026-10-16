@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Trial Reel 1: One tola</title>
+__FONTS__
+<link rel="stylesheet" href="base.css">
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div class="abs mono" style="left:100px;top:600px;font-size:34px;letter-spacing:.24em;color:#a39d90">1950 · ONE TOLA OF GOLD</div>
+    <div id="s1n" class="abs mono glitch" style="left:100px;top:680px;font-size:250px;line-height:1;color:#f0cf6a">Rs 43</div>
+    <div id="s1t" class="abs serif" style="left:100px;right:100px;top:1000px;font-size:70px;line-height:1.1;color:#f1eadc"></div>
+  </div>
+  <div id="s2" class="scene">
+    <div id="s2y" class="abs mono" style="left:100px;top:600px;font-size:34px;letter-spacing:.24em;color:#a39d90">1950</div>
+    <div id="s2n" class="abs mono glitch" style="left:100px;top:700px;font-size:150px;line-height:1;white-space:nowrap;color:#f0cf6a">Rs 43</div>
+    <div class="abs" style="left:100px;top:960px;width:880px;height:10px;border-radius:5px;background:#1a1b20;overflow:hidden"><div id="s2bar" style="height:100%;width:0;background:#d4af37"></div></div>
+    <div class="abs" style="left:100px;top:1010px;font-size:28px;color:#8f8a7e">24k per tola, Pakistan · 14 Oct 2026 rate: Minute Mirror</div>
+  </div>
+  <div id="s3" class="scene">
+    <div id="s3a" class="abs serif" style="left:100px;right:100px;top:640px;font-size:110px;line-height:1.05;letter-spacing:-.02em;color:#f1eadc">The gold didn't change.</div>
+    <div id="s3b" class="abs serif glitch" style="left:100px;right:100px;top:930px;font-size:110px;line-height:1.05;letter-spacing:-.02em;color:#f0cf6a;opacity:0">The rupee did.</div>
+  </div>
+  <div id="s4" class="scene">
+    <div class="abs mono" style="left:0;right:0;top:660px;text-align:center;font-size:32px;letter-spacing:.3em;color:#cfc7b6;padding-left:.3em">THE DOCUMENTARY</div>
+    <div class="abs serif glitch" style="left:0;right:0;top:740px;text-align:center;font-size:150px;line-height:1;color:#f0cf6a">ESCAPE</div>
+    <div class="abs serif" style="left:0;right:0;top:910px;text-align:center;font-size:66px;letter-spacing:.4em;color:#f1eadc;padding-left:.4em">THE</div>
+    <div class="abs serif glitch" style="left:0;right:0;top:990px;text-align:center;font-size:150px;line-height:1;color:#f0cf6a">MATRIX</div>
+    <div id="s4f" class="abs mono" style="left:0;right:0;top:1220px;text-align:center;font-size:32px;color:#d4af37;opacity:0">Follow @the.goldcouncil</div>
+  </div>
+</div>
+<script src="base.js"></script>
+<script>
+const DUR=13, CUTS=[2.6,7.4,10.4];
+buildChrome("CASE FILE · TOLA");
+function scenes(t,f){
+  $("s1").style.opacity=fade(t,0,2.6,.15);
+  $("s1n").style.transform=`translateX(${(t<.35)?(rnd(f)-.5)*40:0}px)`;
+  $("s1t").innerHTML=gold(type("Guess what it costs today.",t,.6,1.2),"today.");
+  $("s2").style.opacity=fade(t,2.6,7.4);
+  const k=ease((t-3.0)/3.4), v=43*Math.pow(432000/43,k);
+  $("s2n").textContent="Rs "+Math.round(v).toLocaleString("en-US");
+  $("s2y").textContent=k<1?String(Math.round(1950+76*k)):"OCT 2026";
+  $("s2bar").style.width=(k*100)+"%";
+  $("s3").style.opacity=fade(t,7.4,10.4);
+  $("s3b").style.opacity=clamp((t-8.6)/.15);
+  $("s4").style.opacity=clamp((t-10.4)/.2);
+  $("s4f").style.opacity=clamp((t-11.2)/.3);
+}
+render(0);
+</script></body></html>

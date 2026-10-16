@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Trial Reel 2: Temporary</title>
+__FONTS__
+<link rel="stylesheet" href="base.css">
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div id="s1t" class="abs serif" style="left:100px;right:100px;top:660px;font-size:104px;line-height:1.06;letter-spacing:-.02em;color:#f1eadc"></div>
+  </div>
+  <div id="s2" class="scene">
+    <div class="abs mono" style="left:100px;top:640px;font-size:34px;letter-spacing:.24em;color:#a39d90">15 AUGUST 1971 · THEY CALLED IT</div>
+    <div class="abs mono" style="left:100px;top:720px;font-size:150px;line-height:1;color:#8f8a7e">TEMPORARY<div id="s2s" style="position:absolute;left:-10px;top:52%;height:12px;width:0;background:#e05a4f"></div></div>
+    <div id="s2c" class="abs mono glitch" style="left:100px;top:940px;font-size:220px;line-height:1;color:#f0cf6a;opacity:0">0</div>
+    <div id="s2l" class="abs mono" style="left:100px;top:1190px;font-size:40px;letter-spacing:.12em;color:#e05a4f;opacity:0">YEARS AND COUNTING</div>
+  </div>
+  <div id="s3" class="scene">
+    <div id="s3t" class="abs serif" style="left:100px;right:100px;top:660px;font-size:96px;line-height:1.06;letter-spacing:-.02em;color:#f1eadc"></div>
+    <div class="abs" style="left:100px;top:1060px;font-size:30px;color:#8f8a7e">End of US dollar convertibility into gold, 1971</div>
+  </div>
+  <div id="s4" class="scene">
+    <div class="abs serif glitch" style="left:0;right:0;top:760px;text-align:center;font-size:130px;line-height:1.05;color:#f0cf6a">Escape<br>the Matrix</div>
+    <div id="s4f" class="abs mono" style="left:0;right:0;top:1100px;text-align:center;font-size:32px;color:#d4af37;opacity:0">Follow @the.goldcouncil</div>
+  </div>
+</div>
+<script src="base.js"></script>
+<script>
+const DUR=12, CUTS=[2.2,7.0,9.6];
+buildChrome("CASE FILE 001");
+function scenes(t,f){
+  $("s1").style.opacity=fade(t,0,2.2,.15);
+  $("s1t").innerHTML=gold(type("One word changed your money forever.",t,.1,1.4),"forever.");
+  $("s2").style.opacity=fade(t,2.2,7.0);
+  $("s2s").style.width=(ease((t-3.0)/.4)*900)+"px";
+  const c=clamp((t-3.6)/.15); $("s2c").style.opacity=c;
+  $("s2c").textContent=String(Math.round(55*ease((t-3.6)/2.0)));
+  $("s2l").style.opacity=clamp((t-5.7)/.2);
+  $("s3").style.opacity=fade(t,7.0,9.6);
+  $("s3t").innerHTML=gold(type("Your salary is still measured with that broken ruler.",t,7.1,1.6),"broken ruler.");
+  $("s4").style.opacity=clamp((t-9.6)/.2);
+  $("s4f").style.opacity=clamp((t-10.3)/.3);
+}
+render(0);
+</script></body></html>
