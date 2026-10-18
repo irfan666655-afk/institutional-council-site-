@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Reel v2: Banks create money</title>
+__FONTS__
+<link rel="stylesheet" href="base.css">
+<style>
+.ur{font-family:'IBM Plex Sans',sans-serif;font-weight:700;color:#f1eadc}
+.en{font-family:'IBM Plex Sans',sans-serif;font-weight:500;color:#a39d90}
+.c{left:0;right:0;text-align:center}
+.stamp{border:8px solid #e05a4f;color:#e05a4f;border-radius:10px;padding:6px 30px;font-family:'JetBrains Mono',monospace;font-weight:700;letter-spacing:.12em}
+</style>
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div class="abs mono c" style="top:690px;font-size:40px;letter-spacing:.24em;color:#d4af37;padding-left:.24em">SCHOOL MEIN SIKHAYA GAYA</div>
+    <div class="abs ur c" style="left:100px;right:100px;top:780px;font-size:92px;line-height:1.1">"Bank aap ki <span style="color:#f0cf6a">bachat</span> aage qarz deta hai."</div>
+    <div class="abs en c" style="top:1110px;font-size:40px">"Banks lend out your savings."</div>
+    <div id="s1x" class="abs c" style="top:1200px;opacity:0"><span class="stamp" style="font-size:64px;display:inline-block;transform:rotate(-6deg)">MYTH</span></div>
+  </div>
+  <div id="s2" class="scene">
+    <div class="abs mono c" style="top:680px;font-size:34px;letter-spacing:.2em;color:#a39d90;padding-left:.2em">RECORD · BANK OF ENGLAND · 2014</div>
+    <div class="abs ur c" style="left:70px;right:70px;top:760px;font-size:80px;line-height:1.12">Bank qarz deta hai, to <span style="color:#f0cf6a">naya paisa</span> ban jata hai.</div>
+    <div class="abs en c" style="left:110px;right:110px;top:1080px;font-size:40px;line-height:1.3">A new loan creates a matching new deposit.</div>
+    <div class="abs en c" style="top:1230px;font-size:28px;color:#8f8a7e">Quarterly Bulletin 2014 Q1, "Money creation in the modern economy"</div>
+  </div>
+  <div id="s3" class="scene">
+    <div class="abs mono c" style="top:700px;font-size:36px;letter-spacing:.2em;color:#a39d90;padding-left:.2em">NEW LOAN · ACCOUNT BALANCE</div>
+    <div class="abs" style="left:100px;right:100px;top:780px;height:250px;border:3px solid rgba(212,175,55,.5);border-radius:18px;background:rgba(10,10,13,.8)"></div>
+    <div id="s3n" class="abs mono glitch c" style="top:845px;font-size:110px;line-height:1;color:#f0cf6a">0</div>
+    <div class="abs ur c" style="top:1090px;font-size:76px">Paisa <span style="color:#f0cf6a">type</span> hota hai.</div>
+    <div class="abs en c" style="top:1200px;font-size:40px">New money is typed into existence.</div>
+  </div>
+  <div id="s4" class="scene">
+    <div class="abs ur c" style="left:110px;right:110px;top:700px;font-size:76px;line-height:1.12">Asal sawal: naya paisa <span style="color:#f0cf6a">pehle kis ko</span> milta hai?</div>
+    <div class="abs en c" style="top:950px;font-size:40px">Who gets it first matters.</div>
+    <div class="abs mono c" style="top:1060px;font-size:30px;letter-spacing:.3em;color:#cfc7b6;padding-left:.3em">FROM THE DOCUMENTARY</div>
+    <div class="abs serif glitch c" style="top:1115px;font-size:76px;line-height:1;color:#f0cf6a">ESCAPE THE MATRIX</div>
+    <div id="s4f" class="abs mono c" style="top:1290px;font-size:34px;color:#d4af37;opacity:0">Follow @the.goldcouncil</div>
+  </div>
+</div>
+<script src="base.js"></script>
+<script>
+const DUR=12, CUTS=[2.8,6.0,8.6];
+buildChrome("CASE FILE · MONEY");
+function scenes(t,f){
+  $("s1").style.opacity=t<2.8?1:0;
+  const sx=clamp((t-1.2)/.12); $("s1x").style.opacity=sx;
+  $("s1x").style.transform=`scale(${1.6-0.6*sx})`;
+  $("s2").style.opacity=fade(t,2.8,6.0,.1);
+  $("s3").style.opacity=fade(t,6.0,8.6,.1);
+  const k=clamp((t-6.4)/1.3), digits="1,000,000", n=Math.floor(k*digits.length);
+  $("s3n").textContent=n?"Rs "+digits.slice(0,n)+(Math.floor(t*6)%2?"_":""):"Rs 0";
+  $("s4").style.opacity=clamp((t-8.6)/.15);
+  $("s4f").style.opacity=clamp((t-9.4)/.3);
+}
+render(0);
+</script></body></html>
