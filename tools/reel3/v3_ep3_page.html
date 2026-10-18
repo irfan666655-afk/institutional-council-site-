@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>The Machine, Part 3: What central banks buy</title>
+<link rel="stylesheet" href="file:///tmp/claude-0/-home-claude/ee3cde47-b1ef-53af-8c44-9324be7079bc/scratchpad/reel/../fontpkg/node_modules/@fontsource/noto-serif/700.css"><link rel="stylesheet" href="file:///tmp/claude-0/-home-claude/ee3cde47-b1ef-53af-8c44-9324be7079bc/scratchpad/reel/../fontpkg/node_modules/@fontsource/ibm-plex-sans/500.css"><link rel="stylesheet" href="file:///tmp/claude-0/-home-claude/ee3cde47-b1ef-53af-8c44-9324be7079bc/scratchpad/reel/../fontpkg/node_modules/@fontsource/ibm-plex-sans/700.css"><link rel="stylesheet" href="file:///tmp/claude-0/-home-claude/ee3cde47-b1ef-53af-8c44-9324be7079bc/scratchpad/reel/../fontpkg/node_modules/@fontsource/jetbrains-mono/700.css">
+<link rel="stylesheet" href="base3.css">
+<style>.red{display:inline-block;height:96px;background:#f1eadc;border-radius:6px;vertical-align:middle}</style>
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div class="abs ur c" style="left:90px;right:90px;top:680px;font-size:80px;line-height:1.12">Duniya ke central banks <span class="g">chupke se</span> kya khareed rahe hain?</div>
+    <div class="abs c" style="top:1020px"><span class="red" style="width:520px"></span></div>
+    <div class="abs en c" style="top:1160px;font-size:38px">What are central banks quietly buying?</div>
+  </div>
+  <div id="s2" class="scene">
+    <div class="abs mono c" style="top:700px;font-size:40px;letter-spacing:.24em;color:#a39d90;padding-left:.24em">DECRYPTING</div>
+    <div id="s2c" class="abs mono c glitch" style="top:790px;font-size:150px;line-height:1;color:#f1eadc">█████</div>
+    <div class="abs" style="left:140px;top:1010px;width:800px;height:14px;border-radius:7px;background:#1a1b20;overflow:hidden"><div id="s2bar" style="height:100%;width:0;background:#d4af37"></div></div>
+    <div id="s2p" class="abs mono c" style="top:1050px;font-size:40px;color:#d4af37">0%</div>
+  </div>
+  <div id="s3" class="scene">
+    <div class="abs c" style="top:700px"><span id="s3n" class="serif sweep" style="display:inline-block;font-size:260px;line-height:1.1">SONA.</span></div>
+    <div class="abs c" style="top:1010px"><span id="s3u" class="ur" style="display:inline-block;font-size:80px"><span class="g">1,000+ tonnes</span> ek saal mein.</span></div>
+    <div class="abs en c" style="top:1130px;font-size:36px">Gold. More than 1,000 tonnes in a single year.</div>
+  </div>
+  <div id="s4" class="scene">
+    <div class="abs ur c" style="top:690px;font-size:76px">Aur yeh <span class="g">teen saal lagatar</span>:</div>
+    <div class="abs c" style="top:830px;display:flex;justify-content:center;gap:30px">
+      <span id="y1" class="pill" style="font-size:64px;padding:18px 34px">2022</span><span id="y2" class="pill" style="font-size:64px;padding:18px 34px">2023</span><span id="y3" class="pill" style="font-size:64px;padding:18px 34px">2024</span></div>
+    <div class="abs en c" style="top:1010px;font-size:36px">Over 1,000 tonnes a year, three years in a row.</div>
+    <div class="abs en c" style="left:90px;right:90px;top:1080px;font-size:28px;color:#8f8a7e;line-height:1.4">Source: World Gold Council, Gold Demand Trends, full year 2024</div>
+  </div>
+  <div id="s5" class="scene">
+    <div id="s5t" class="abs ur c" style="left:90px;right:90px;top:700px;font-size:84px;line-height:1.15"></div>
+    <div class="abs c" style="top:1010px"><span id="s5p" class="pill" style="font-size:36px">PART 4 · KAL SHAAM 6 BAJE</span></div>
+    <div class="abs mono c" style="top:1120px;font-size:32px;color:#d4af37">Follow @the.goldcouncil</div>
+    <div class="abs en c" style="top:1175px;font-size:34px">taa ke Part 4 miss na ho.</div>
+  </div>
+</div>
+<script>
+const DUR=12, BPM=100, CUTS=[2.4,4.8,7.2,9.6], HITS=[0,4.8,7.2], PULSE=[[4.8,9.6]];
+const SERIES={part:3,of:5,title:"THE MACHINE"};
+</script>
+<script src="base3.js"></script>
+<script>
+buildChrome("CASE FILE 002 · RESERVES");
+$("s5t").innerHTML=W("Aur Pakistan ke paas")+' <span class="w g">kitna</span> <span class="w g">sona</span> '+W("hai?");
+const G="█▓▒░#$%&@";
+function scenes(t,f){
+  $("s1").style.opacity=t<2.4?1:0;
+  $("s2").style.opacity=on(t,2.4,4.8)?1:0;
+  const k=clamp((t-2.5)/2.0);
+  $("s2bar").style.width=(k*100)+"%"; $("s2p").textContent=Math.round(k*100)+"%";
+  $("s2c").textContent=Array.from({length:5},(_,i)=>G[Math.floor(rnd(f*7+i)*G.length)]).join("");
+  $("s3").style.opacity=on(t,4.8,7.2)?1:0;
+  pop("s3n",t,4.8); pop("s3u",t,5.7);
+  $("s4").style.opacity=on(t,7.2,9.6)?1:0;
+  pop("y1",t,7.8); pop("y2",t,8.1); pop("y3",t,8.4);
+  $("s5").style.opacity=t>=9.6?1:0;
+  words("s5t",t,9.6,0.15); pop("s5p",t,10.8);
+}
+render(0);
+</script></body></html>

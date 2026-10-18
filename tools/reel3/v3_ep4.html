@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>The Machine, Part 4: Pakistan's gold</title>
+__FONTS__
+<link rel="stylesheet" href="base3.css">
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div class="abs ur c" style="left:90px;right:90px;top:680px;font-size:84px;line-height:1.12">State Bank ke paas <span class="g">kitna sona</span> hai?</div>
+    <div class="abs c" style="top:930px"><span class="mono" style="display:inline-block;font-size:120px;color:#f1eadc;border-bottom:8px solid #d4af37;padding:0 30px">___ tonnes</span></div>
+    <div class="abs en c" style="top:1130px;font-size:38px">How much gold does Pakistan's central bank hold? Guess.</div>
+  </div>
+  <div id="s2" class="scene">
+    <div class="abs mono c" style="top:700px;font-size:40px;letter-spacing:.24em;color:#a39d90;padding-left:.24em">SBP VAULT · COUNTING</div>
+    <div id="s2c" class="abs mono glitch c" style="top:790px;font-size:200px;line-height:1;color:#f1eadc">0</div>
+    <div class="abs mono c" style="top:1010px;font-size:44px;color:#a39d90">TONNES</div>
+  </div>
+  <div id="s3" class="scene">
+    <div class="abs mono c" style="top:690px;font-size:38px;letter-spacing:.2em;color:#d4af37;padding-left:.2em">END OF JUNE 2026</div>
+    <div class="abs c" style="top:770px"><span id="s3n" class="mono sweep" style="display:inline-block;font-size:200px;line-height:1">~64.8 t</span></div>
+    <div class="abs c" style="top:1000px"><span id="s3u" class="ur" style="display:inline-block;font-size:62px">2.084 million troy ounce</span></div>
+    <div class="abs en c" style="top:1090px;font-size:36px">Valued at Rs 2.334 trillion</div>
+    <div class="abs en c" style="left:90px;right:90px;top:1160px;font-size:28px;color:#8f8a7e;line-height:1.4">Source: SBP annual accounts FY26, via Nukta (28 Aug 2026). Tonnes converted by us.</div>
+  </div>
+  <div id="s4" class="scene">
+    <div class="abs ur c" style="top:690px;font-size:70px">Hamari zubaan mein:</div>
+    <div class="abs c" style="top:790px"><span id="s4n" class="mono sweep" style="display:inline-block;font-size:150px;line-height:1;white-space:nowrap">55.6 lakh</span></div>
+    <div class="abs c" style="top:1000px"><span id="s4u" class="ur" style="display:inline-block;font-size:90px">tola.</span></div>
+    <div class="abs en c" style="left:90px;right:90px;top:1130px;font-size:34px;line-height:1.3">About 5.56 million tola, at 11.66 g per tola.</div>
+  </div>
+  <div id="s5" class="scene">
+    <div id="s5t" class="abs ur c" style="left:90px;right:90px;top:680px;font-size:74px;line-height:1.15"></div>
+    <div class="abs c" style="top:1010px"><span id="s5p" class="pill" style="font-size:36px">PART 5 · FINAL · KAL 6 BAJE</span></div>
+    <div class="abs mono c" style="top:1120px;font-size:32px;color:#d4af37">Follow @the.goldcouncil</div>
+    <div class="abs en c" style="top:1175px;font-size:34px">taa ke final part miss na ho.</div>
+  </div>
+</div>
+<script>
+const DUR=12, BPM=100, CUTS=[2.4,4.8,7.2,9.6], HITS=[0,4.8,7.2], PULSE=[[4.8,9.6]];
+const SERIES={part:4,of:5,title:"THE MACHINE"};
+</script>
+<script src="base3.js"></script>
+<script>
+buildChrome("CASE FILE 002 · RESERVES");
+$("s5t").innerHTML=W("Naya paisa banta hai to sab se")+' <span class="w g">pehle</span> '+W("kis ki jeb mein jata hai?");
+function scenes(t,f){
+  $("s1").style.opacity=t<2.4?1:0;
+  $("s2").style.opacity=on(t,2.4,4.8)?1:0;
+  const k=ease((t-2.5)/2.1); $("s2c").textContent=(64.8*k).toFixed(1);
+  $("s3").style.opacity=on(t,4.8,7.2)?1:0;
+  pop("s3n",t,4.8); pop("s3u",t,5.7);
+  $("s4").style.opacity=on(t,7.2,9.6)?1:0;
+  pop("s4n",t,7.2); pop("s4u",t,7.8);
+  $("s5").style.opacity=t>=9.6?1:0;
+  words("s5t",t,9.6,0.13); pop("s5p",t,10.8);
+}
+render(0);
+</script></body></html>

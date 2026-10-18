@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>The Machine, Part 1: Rs 3.31</title>
+__FONTS__
+<link rel="stylesheet" href="base3.css">
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div class="abs ur c" style="top:680px;font-size:62px">Dada ke zamane mein 1 dollar:</div>
+    <div class="abs c" style="top:780px"><span id="s1n" class="mono sweep" style="display:inline-block;font-size:190px;line-height:1;white-space:nowrap">Rs 3.31</span></div>
+    <div class="abs ur c" style="top:1060px;font-size:88px">Aaj kitne ka hai?</div>
+    <div class="abs en c" style="top:1180px;font-size:38px">1947 · one US dollar in rupees</div>
+  </div>
+  <div id="s2" class="scene">
+    <div class="abs mono c" style="top:640px;font-size:34px;letter-spacing:.2em;color:#a39d90;padding-left:.2em">RUPEES PER 1 US DOLLAR</div>
+    <svg class="abs" style="left:100px;top:720px" width="880" height="520" viewBox="0 0 880 520">
+      <line x1="0" y1="480" x2="880" y2="480" stroke="#2a2a30" stroke-width="3"/>
+      <text x="0" y="515" fill="#8f8a7e" font-family="JetBrains Mono" font-size="26">1947</text>
+      <text x="880" y="515" fill="#8f8a7e" font-family="JetBrains Mono" font-size="26" text-anchor="end">2026</text>
+      <path id="line" fill="none" stroke="#f0cf6a" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" style="filter:drop-shadow(0 0 12px rgba(240,207,106,.6))"/>
+      <circle id="dot" r="14" fill="#f0cf6a"/>
+    </svg>
+    <div id="lbl" class="abs mono" style="font-size:44px;color:#f1eadc;white-space:nowrap"></div>
+  </div>
+  <div id="s3" class="scene">
+    <div class="abs mono c" style="top:690px;font-size:38px;letter-spacing:.2em;color:#d4af37;padding-left:.2em">14 OCT 2026 · 1 US DOLLAR</div>
+    <div class="abs c" style="top:780px"><span id="s3n" class="mono glitch" style="display:inline-block;font-size:150px;line-height:1;white-space:nowrap;color:#f0cf6a">Rs 276.95</span></div>
+    <div class="abs c" style="top:1010px"><span id="s3u" class="ur" style="display:inline-block;font-size:76px">Rs 3.31 se <span class="g">Rs 276.95</span>.</span></div>
+    <div class="abs en c" style="left:90px;right:90px;top:1150px;font-size:28px;color:#8f8a7e;line-height:1.4">1947–2020: Nukta, "Rupee vs Rupee" · 2026: Mettis Global, interbank close 14 Oct</div>
+  </div>
+  <div id="s4" class="scene">
+    <div class="abs c" style="top:700px"><span id="s4n" class="mono sweep" style="display:inline-block;font-size:260px;line-height:1">98.8%</span></div>
+    <div id="s4t" class="abs ur c" style="left:100px;right:100px;top:990px;font-size:70px;line-height:1.15"></div>
+    <div class="abs en c" style="left:100px;right:100px;top:1180px;font-size:36px;line-height:1.3">The rupee has lost 98.8% of its value against the dollar since 1947.</div>
+  </div>
+  <div id="s5" class="scene">
+    <div id="s5t" class="abs ur c" style="left:100px;right:100px;top:690px;font-size:76px;line-height:1.15"></div>
+    <div class="abs c" style="top:1010px"><span id="s5p" class="pill" style="font-size:36px">PART 2 · KAL SHAAM 6 BAJE</span></div>
+    <div class="abs mono c" style="top:1120px;font-size:32px;color:#d4af37">Follow @the.goldcouncil</div>
+    <div class="abs en c" style="top:1175px;font-size:34px">taa ke Part 2 miss na ho.</div>
+  </div>
+</div>
+<script>
+const DUR=12, BPM=100, CUTS=[2.4,4.8,7.2,9.6], HITS=[0,4.8,7.2], PULSE=[[4.8,9.6]];
+const SERIES={part:1,of:5,title:"THE MACHINE"};
+</script>
+<script src="base3.js"></script>
+<script>
+buildChrome("CASE FILE 002 · RUPEE");
+$("s4t").innerHTML=W("Dollar ke muqable rupee ki itni")+' <span class="w g">qeemat</span> <span class="w g">gayi.</span>';
+$("s5t").innerHTML=W("Lekin sab se bara jhatka sirf")+' <span class="w g">EK</span> <span class="w g">saal</span> '+W("mein aaya.");
+const PTS=[[1947,3.31],[1955,3.91],[1971,4.76],[1972,11.01],[2001,63.85],[2010,85.54],[2020,168.05],[2026,276.95]];
+const X=y=>(y-1947)/(2026-1947)*880, Y=v=>480-v/290*460;
+$("line").setAttribute("d",PTS.map((p,i)=>(i?"L":"M")+X(p[0]).toFixed(1)+" "+Y(p[1]).toFixed(1)).join(" "));
+const LEN=$("line").getTotalLength(); $("line").style.strokeDasharray=LEN;
+function scenes(t,f){
+  $("s1").style.opacity=t<2.4?1:0;
+  $("s2").style.opacity=on(t,2.4,4.8)?1:0;
+  const k=ease((t-2.5)/2.1), L=LEN*k; $("line").style.strokeDashoffset=LEN-L;
+  const pt=$("line").getPointAtLength(L); $("dot").setAttribute("cx",pt.x); $("dot").setAttribute("cy",pt.y);
+  let last=PTS[0]; PTS.forEach(p=>{if(X(p[0])<=pt.x+0.5)last=p;});
+  $("lbl").textContent=last[0]+" · Rs "+last[1].toFixed(2);
+  $("lbl").style.left=Math.min(100+pt.x-140, 620)+"px"; $("lbl").style.top=(720+pt.y-80)+"px";
+  $("s3").style.opacity=on(t,4.8,7.2)?1:0;
+  pop("s3n",t,4.8); pop("s3u",t,5.7);
+  $("s4").style.opacity=on(t,7.2,9.6)?1:0;
+  pop("s4n",t,7.2); words("s4t",t,7.8,0.15);
+  $("s5").style.opacity=t>=9.6?1:0;
+  words("s5t",t,9.6,0.13); pop("s5p",t,10.8);
+}
+render(0);
+</script></body></html>

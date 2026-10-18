@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>The Machine, Part 5: Who gets it first</title>
+__FONTS__
+<link rel="stylesheet" href="base3.css">
+<style>
+.node{position:absolute;left:190px;width:700px;height:110px;border:3px solid rgba(212,175,55,.55);border-radius:18px;background:rgba(10,10,13,.85);display:flex;align-items:center;justify-content:space-between;padding:0 34px;box-sizing:border-box;font-family:'IBM Plex Sans',sans-serif;font-weight:700;font-size:46px;color:#f1eadc}
+.node b{font-family:'JetBrains Mono',monospace;font-size:30px;color:#a39d90;font-weight:700}
+</style>
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div class="abs ur c" style="left:90px;right:90px;top:720px;font-size:96px;line-height:1.1">Naya paisa sab ko <span class="g">ek saath</span> nahi milta.</div>
+    <div class="abs en c" style="top:1080px;font-size:40px">New money does not reach everyone at once.</div>
+  </div>
+  <div id="s2" class="scene">
+    <div id="n1" class="node" style="top:640px"><span>Central bank</span><b>01</b></div>
+    <div id="n2" class="node" style="top:800px"><span>Bade banks</span><b>02</b></div>
+    <div id="n3" class="node" style="top:960px"><span>Bade qarzdaar</span><b>03</b></div>
+    <div id="n4" class="node" style="top:1120px;border-color:#e05a4f"><span>Aap</span><b style="color:#e05a4f">04</b></div>
+    <div id="coin" class="abs" style="left:110px;width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff4c8,#d4af37 55%,#8a6d1c);box-shadow:0 0 24px rgba(240,207,106,.8)"></div>
+  </div>
+  <div id="s3" class="scene">
+    <div class="abs c" style="left:80px;right:80px;top:660px"><span id="s3n" class="ur" style="display:inline-block;font-size:112px;line-height:1.05">Aap <span class="sweep">aakhir</span> mein hain.</span></div>
+    <div id="s3t" class="abs ur c" style="left:90px;right:90px;top:940px;font-size:58px;line-height:1.2"></div>
+    <div class="abs en c" style="left:90px;right:90px;top:1150px;font-size:36px;line-height:1.3">By the time it reaches you, prices have already moved.</div>
+  </div>
+  <div id="s4" class="scene">
+    <div class="abs ur c" style="top:690px;font-size:66px">Isay kehte hain:</div>
+    <div class="abs c" style="top:790px"><span id="s4n" class="serif sweep" style="display:inline-block;font-size:120px;line-height:1.1">Cantillon Effect</span></div>
+    <div class="abs ur c" style="top:960px;font-size:56px">Richard Cantillon ne <span class="g">1730s</span> mein likha.</div>
+    <div class="abs en c" style="left:90px;right:90px;top:1060px;font-size:36px;line-height:1.3">Those closest to new money spend it before prices rise.</div>
+  </div>
+  <div id="s5" class="scene">
+    <div class="abs mono c" style="top:660px;font-size:34px;letter-spacing:.2em;color:#cfc7b6;padding-left:.2em">THE MACHINE · 5/5 · FILE CLOSED</div>
+    <div class="abs ur c" style="left:90px;right:90px;top:730px;font-size:66px;line-height:1.15">Poori file jald khulegi:</div>
+    <div class="abs c" style="top:840px"><span id="s5m" class="serif sweep" style="display:inline-block;font-size:80px;line-height:1.1">ESCAPE THE MATRIX</span></div>
+    <div class="abs ur c" style="left:90px;right:90px;top:1000px;font-size:50px;line-height:1.2">Part 1 se dobara dekho. Sab jur jayega.</div>
+    <div id="s5f" class="abs c" style="top:1130px;opacity:0"><span class="pill" style="font-size:34px">FOLLOW @THE.GOLDCOUNCIL</span></div>
+  </div>
+</div>
+<script>
+const DUR=12, BPM=100, CUTS=[2.4,4.8,7.2,9.6], HITS=[0,4.8,7.2], PULSE=[[4.8,9.6]];
+const SERIES={part:5,of:5,title:"THE MACHINE"};
+</script>
+<script src="base3.js"></script>
+<script>
+buildChrome("CASE FILE 002 · FINAL");
+$("s3t").innerHTML=W("Jab paisa aap tak pohanchta hai,")+' <span class="w g">cheezein</span> '+W("pehle hi mehngi ho chuki hoti hain.");
+function scenes(t,f){
+  $("s1").style.opacity=t<2.4?1:0;
+  $("s2").style.opacity=on(t,2.4,4.8)?1:0;
+  ["n1","n2","n3","n4"].forEach((id,i)=>pop(id,t,2.4+i*0.3,.18));
+  const k=ease((t-3.3)/1.4); $("coin").style.top=(667+k*480)+"px"; $("coin").style.opacity=t>3.2?1:0;
+  $("s3").style.opacity=on(t,4.8,7.2)?1:0;
+  pop("s3n",t,4.8); words("s3t",t,5.6,0.12);
+  $("s4").style.opacity=on(t,7.2,9.6)?1:0;
+  pop("s4n",t,7.2);
+  $("s5").style.opacity=t>=9.6?1:0;
+  pop("s5m",t,9.9); $("s5f").style.opacity=clamp((t-10.8)/.2);
+}
+render(0);
+</script></body></html>

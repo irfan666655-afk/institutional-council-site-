@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Reel v3: Temporary</title>
+__FONTS__
+<link rel="stylesheet" href="base3.css">
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div class="abs mono c" style="top:690px;font-size:40px;letter-spacing:.24em;color:#d4af37;padding-left:.24em">15 AUGUST 1971</div>
+    <div class="abs mono c" style="top:780px;font-size:150px;line-height:1;color:#f1eadc"><span style="position:relative;display:inline-block">TEMPORARY<span id="s1s" style="position:absolute;left:-14px;top:50%;height:14px;width:0;background:#e05a4f"></span></span></div>
+    <div class="abs ur c" style="left:110px;right:110px;top:1010px;font-size:76px;line-height:1.12">Is ek lafz ne aap ka <span class="g">paisa</span> badal diya.</div>
+    <div class="abs en c" style="top:1210px;font-size:40px">One word changed your money.</div>
+  </div>
+  <div id="s2" class="scene">
+    <div class="abs mono c" style="top:700px;font-size:40px;letter-spacing:.2em;color:#a39d90;padding-left:.2em">"TEMPORARY" · FOR</div>
+    <div id="s2c" class="abs mono glitch c" style="top:780px;font-size:260px;line-height:1;color:#f0cf6a">0</div>
+    <div class="abs mono c" style="top:1060px;font-size:48px;letter-spacing:.16em;color:#e05a4f;padding-left:.16em">YEARS AND COUNTING</div>
+    <div class="abs c" style="top:1160px"><span id="s2u" class="ur" style="display:inline-block;font-size:60px">Aaj tak wapas nahi hua.</span></div>
+  </div>
+  <div id="s3" class="scene">
+    <div id="s3t" class="abs ur c" style="left:110px;right:110px;top:720px;font-size:84px;line-height:1.12"></div>
+    <div class="abs en c" style="left:60px;right:60px;top:1110px;font-size:36px;line-height:1.3">Your salary is still measured with that broken ruler.</div>
+    <div class="abs en c" style="top:1260px;font-size:28px;color:#8f8a7e">US ended dollar-to-gold convertibility, 15 Aug 1971</div>
+  </div>
+  <div id="s4" class="scene">
+    <div id="s4t" class="abs ur c" style="left:110px;right:110px;top:720px;font-size:66px;line-height:1.15"></div>
+    <div class="abs mono c" style="top:1000px;font-size:30px;letter-spacing:.3em;color:#cfc7b6;padding-left:.3em">FROM THE DOCUMENTARY</div>
+    <div class="abs c" style="top:1050px"><span id="s4m" class="serif sweep" style="display:inline-block;font-size:80px;line-height:1.1">ESCAPE THE MATRIX</span></div>
+    <div id="s4f" class="abs c" style="top:1240px;opacity:0"><span class="pill">FOLLOW @THE.GOLDCOUNCIL</span></div>
+  </div>
+</div>
+<script>
+const DUR=10, BPM=100, CUTS=[2.4,4.8,7.2], HITS=[0,0.6,2.4], PULSE=[[2.4,4.8]];
+</script>
+<script src="base3.js"></script>
+<script>
+buildChrome("CASE FILE 001");
+$("s3t").innerHTML=W("Aap ki tankhwah aaj bhi isi")+' <span class="w g">toote</span> <span class="w g">paimane</span> '+W("se naapi jaati hai.");
+$("s4t").innerHTML=W("Ghar mein kisi ko")+' <span class="w g">1971</span> '+W("yaad hai? Unhein bhejo.");
+function scenes(t,f){
+  $("s1").style.opacity=t<2.4?1:0;
+  $("s1s").style.width=(easeOut((t-0.6)/.18)*(150*0.6*9+28))+"px";
+  $("s2").style.opacity=on(t,2.4,4.8)?1:0;
+  $("s2c").textContent=String(Math.round(55*ease((t-2.5)/1.3)));
+  pop("s2u",t,4.2);
+  $("s3").style.opacity=on(t,4.8,7.2)?1:0;
+  words("s3t",t,4.8,0.15);
+  $("s4").style.opacity=t>=7.2?1:0;
+  words("s4t",t,7.2,0.15);
+  pop("s4m",t,8.4); $("s4f").style.opacity=clamp((t-9.0)/.2);
+}
+render(0);
+</script></body></html>

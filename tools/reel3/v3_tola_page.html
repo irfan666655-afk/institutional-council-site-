@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Reel v3: One tola</title>
+<link rel="stylesheet" href="file:///tmp/claude-0/-home-claude/ee3cde47-b1ef-53af-8c44-9324be7079bc/scratchpad/reel/../fontpkg/node_modules/@fontsource/noto-serif/700.css"><link rel="stylesheet" href="file:///tmp/claude-0/-home-claude/ee3cde47-b1ef-53af-8c44-9324be7079bc/scratchpad/reel/../fontpkg/node_modules/@fontsource/ibm-plex-sans/500.css"><link rel="stylesheet" href="file:///tmp/claude-0/-home-claude/ee3cde47-b1ef-53af-8c44-9324be7079bc/scratchpad/reel/../fontpkg/node_modules/@fontsource/ibm-plex-sans/700.css"><link rel="stylesheet" href="file:///tmp/claude-0/-home-claude/ee3cde47-b1ef-53af-8c44-9324be7079bc/scratchpad/reel/../fontpkg/node_modules/@fontsource/jetbrains-mono/700.css">
+<link rel="stylesheet" href="base3.css">
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div id="s1y" class="abs mono c" style="top:700px;font-size:40px;letter-spacing:.24em;color:#d4af37;padding-left:.24em">1950 · 1 TOLA SONA</div>
+    <div id="s1n" class="abs mono glitch c" style="top:800px;font-size:210px;line-height:1;white-space:nowrap;color:#f0cf6a">Rs 43</div>
+    <div id="s1q" class="abs ur c" style="top:1090px;font-size:84px;line-height:1.1">Aaj kitne ka hai?</div>
+    <div class="abs en c" style="top:1205px;font-size:40px">Guess before it stops.</div>
+    <div class="abs" style="left:100px;top:1320px;width:880px;height:12px;border-radius:6px;background:#1a1b20;overflow:hidden"><div id="s1bar" style="height:100%;width:0;background:#d4af37"></div></div>
+    <div id="s1src" class="abs en c" style="top:1360px;font-size:28px;color:#8f8a7e;opacity:0">24k per tola, Pakistan · 14 Oct 2026 · Minute Mirror</div>
+  </div>
+  <div id="s2" class="scene">
+    <div class="abs c" style="top:760px"><span id="s2a" class="ur" style="display:inline-block;font-size:110px;line-height:1.05">Sona wahi hai.</span></div>
+    <div class="abs c" style="top:920px"><span id="s2b" class="ur sweep" style="display:inline-block;font-size:110px;line-height:1.15">Rupee badal gaya.</span></div>
+    <div class="abs c" style="top:1110px"><span id="s2e" class="en" style="display:inline-block;font-size:40px">The gold didn't change. The rupee did.</span></div>
+  </div>
+  <div id="s3" class="scene">
+    <div id="s3t" class="abs ur c" style="left:110px;right:110px;top:720px;font-size:72px;line-height:1.15"></div>
+    <div class="abs mono c" style="top:1080px;font-size:30px;letter-spacing:.3em;color:#cfc7b6;padding-left:.3em">FROM THE DOCUMENTARY</div>
+    <div class="abs c" style="top:1130px"><span id="s3m" class="serif sweep" style="display:inline-block;font-size:80px;line-height:1.1">ESCAPE THE MATRIX</span></div>
+    <div id="s3f" class="abs c" style="top:1310px;opacity:0"><span class="pill">FOLLOW @THE.GOLDCOUNCIL</span></div>
+  </div>
+</div>
+<script>
+const DUR=10, BPM=100, CUTS=[4.8,7.2], HITS=[0,4.8], PULSE=[[4.8,7.2]];
+</script>
+<script src="base3.js"></script>
+<script>
+buildChrome("CASE FILE · TOLA");
+$("s3t").innerHTML=W("Yeh us ko bhejo jise")+' <span class="w g" style="white-space:nowrap">1 lakh</span> '+W("wala tola yaad hai.");
+function scenes(t,f){
+  $("s1").style.opacity=t<4.8?1:0;
+  $("s1n").style.transform=`translateX(${(t<.3)?(rnd(f)-.5)*40:0}px)`;
+  const k=ease((t-1.2)/3.0), v=43*Math.pow(432000/43,k);
+  $("s1n").textContent="Rs "+Math.round(v).toLocaleString("en-US");
+  $("s1n").style.fontSize=(210-70*clamp((t-1.2)/1.2))+"px";
+  $("s1y").textContent=(k<1?String(Math.round(1950+76*k)):"OCT 2026")+" · 1 TOLA SONA";
+  $("s1bar").style.width=(k*100)+"%";
+  $("s1q").style.opacity=t<4.2?1:0.35;
+  $("s1src").style.opacity=clamp((t-4.2)/.2);
+  $("s2").style.opacity=on(t,4.8,7.2)?1:0;
+  pop("s2a",t,4.8); pop("s2b",t,5.4); pop("s2e",t,6.0);
+  $("s3").style.opacity=t>=7.2?1:0;
+  words("s3t",t,7.2,0.15);
+  pop("s3m",t,8.4); $("s3f").style.opacity=clamp((t-9.0)/.2);
+}
+render(0);
+</script></body></html>
