@@ -1,0 +1,174 @@
+[
+ {
+  "name": "trailer",
+  "segments": [
+   [
+    37.0,
+    41.0
+   ],
+   [
+    43.0,
+    50.5
+   ],
+   [
+    54.5,
+    60.6
+   ],
+   [
+    70.5,
+    77.0
+   ],
+   [
+    482.5,
+    493.5
+   ],
+   [
+    557.5,
+    570.0
+   ],
+   [
+    765.5,
+    773.2
+   ],
+   [
+    1235.5,
+    1239.2
+   ],
+   [
+    1432.0,
+    1437.0
+   ]
+  ],
+  "tail": 4.0,
+  "part": "OFFICIAL TRAILER",
+  "hook": "Premiere: <span class='g'>Itwar, 1 November</span>, 7 PM",
+  "end": {
+   "k": "ESCAPE THE MATRIX \u00b7 PREMIERE",
+   "t": "Itwar, 1 November \u00b7 <span class='g'>shaam 7 baje</span><br>12 episodes, roz ek",
+   "p": "FOLLOW KAREIN \u00b7 MISS NA HO"
+  },
+  "foot": "FOLLOW @THE.GOLDCOUNCIL \u00b7 PREMIERE 1 NOV, 7 PM",
+  "tag": "TRAILER"
+ },
+ {
+  "name": "h7_rupee",
+  "segments": [
+   [
+    193.0,
+    229.0
+   ]
+  ],
+  "tail": 3.5,
+  "part": "FROM THE DOCUMENTARY \u00b7 EP 02",
+  "hook": "1948 mein <span class='g'>Rs 3.31</span> ka dollar. Rupee ka poora safar.",
+  "end": {
+   "k": "ESCAPE THE MATRIX \u00b7 PREMIERE",
+   "t": "Itwar, 1 November \u00b7 <span class='g'>shaam 7 baje</span>",
+   "p": "FOLLOW KAREIN \u00b7 MISS NA HO"
+  },
+  "foot": "FOLLOW @THE.GOLDCOUNCIL \u00b7 PREMIERE 1 NOV, 7 PM"
+ },
+ {
+  "name": "h1_coppernose",
+  "segments": [
+   [
+    412.5,
+    449.0
+   ]
+  ],
+  "tail": 3.5,
+  "part": "FROM THE DOCUMENTARY \u00b7 EP 04",
+  "hook": "Badshah ki naak se <span class='g'>tanba</span> jhaankne laga. Asal kahani.",
+  "end": {
+   "k": "ESCAPE THE MATRIX \u00b7 PREMIERE",
+   "t": "<span class='g'>Kal shaam 7 baje</span>. Episode 1.",
+   "p": "FOLLOW KAREIN \u00b7 MISS NA HO"
+  },
+  "foot": "FOLLOW @THE.GOLDCOUNCIL \u00b7 PREMIERE 1 NOV, 7 PM"
+ },
+ {
+  "name": "h3_barter",
+  "segments": [
+   [
+    346.5,
+    376.0
+   ]
+  ],
+  "tail": 3.5,
+  "part": "FROM THE DOCUMENTARY \u00b7 EP 04",
+  "hook": "School mein <span class='g'>barter</span> parhaya gaya? Saboot kuch aur kehta hai.",
+  "end": {
+   "k": "FROM EP 04 \u00b7 THE WEIGHT",
+   "t": "Poora episode <span class='g'>grid par</span>",
+   "p": "FOLLOW @THE.GOLDCOUNCIL"
+  }
+ },
+ {
+  "name": "h2_cfd",
+  "segments": [
+   [
+    301.0,
+    326.0
+   ]
+  ],
+  "tail": 3.5,
+  "part": "FROM THE DOCUMENTARY \u00b7 EP 03",
+  "hook": "Retail CFD accounts mein <span class='g'>74 se 89%</span> nuqsan mein the.",
+  "end": {
+   "k": "FROM EP 03 \u00b7 WHOSE PROMISE?",
+   "t": "Poora episode <span class='g'>grid par</span>",
+   "p": "FOLLOW @THE.GOLDCOUNCIL"
+  }
+ },
+ {
+  "name": "h4_revalue",
+  "segments": [
+   [
+    595.5,
+    624.0
+   ]
+  ],
+  "tail": 3.5,
+  "part": "FROM THE DOCUMENTARY \u00b7 EP 05",
+  "hook": "Kya America sona mehnga kar ke qarz mita sakta hai? <span class='g'>Nahi.</span>",
+  "end": {
+   "k": "FROM EP 05 \u00b7 THE MACHINE",
+   "t": "Poora episode <span class='g'>grid par</span>",
+   "p": "FOLLOW @THE.GOLDCOUNCIL"
+  }
+ },
+ {
+  "name": "h5_eclipse",
+  "segments": [
+   [
+    928.5,
+    958.5
+   ]
+  ],
+  "tail": 3.5,
+  "part": "FROM THE DOCUMENTARY \u00b7 EP 08",
+  "hook": "<span class='g'>2 August 2027</span>: Makkah par poora suraj grahan. Iska matlab?",
+  "end": {
+   "k": "FROM EP 08 \u00b7 NO ONE KNOWS THE HOUR",
+   "t": "Poora episode <span class='g'>grid par</span>",
+   "p": "FOLLOW @THE.GOLDCOUNCIL"
+  }
+ },
+ {
+  "name": "h6_sixq",
+  "segments": [
+   [
+    1330.0,
+    1346.0
+   ]
+  ],
+  "tail": 3.5,
+  "part": "FROM THE DOCUMENTARY \u00b7 EP 11",
+  "hook": "Koi bhi <span class='g'>collapse video</span> maanne se pehle yeh 6 sawal.",
+  "end": {
+   "k": "FROM EP 11 \u00b7 THE ESCAPE",
+   "t": "Poora episode <span class='g'>grid par</span>",
+   "p": "SAVE KAREIN \u00b7 SHARE KAREIN"
+  }
+ }
+]

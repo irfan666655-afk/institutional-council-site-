@@ -1,0 +1,47 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Episode frame</title>
+__FONTS__
+<style>
+body{margin:0;background:transparent}
+#st{width:1080px;height:1920px;position:relative;overflow:hidden;font-family:'IBM Plex Sans',sans-serif;color:#f1eadc}
+.bg{background:#050507}
+.abs{position:absolute}
+.mono{font-family:'JetBrains Mono',monospace;font-weight:700}
+.serif{font-family:'Noto Serif',serif;font-weight:700}
+.c{left:0;right:0;text-align:center}
+.g{color:#f0cf6a}
+.col{position:absolute;top:0;width:22px;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:34px;line-height:1.1;word-break:break-all}
+.corner{position:absolute;width:70px;height:70px;border-color:#d4af37;border-style:solid;border-width:0}
+.pill{display:inline-block;border:2px solid rgba(212,175,55,.6);border-radius:999px;padding:12px 30px;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:28px;letter-spacing:.12em;color:#f0cf6a;background:rgba(10,10,13,.85)}
+</style></head><body>
+<div id="st"></div>
+<script>
+const P=JSON.parse(decodeURIComponent(location.hash.slice(1)));
+const st=document.getElementById("st");
+function rnd(n){const x=Math.sin(n*127.1+311.7)*43758.5453;return x-Math.floor(x);}
+if(P.kind==="frame"){
+  st.className="bg";
+  let rain="";const G="$₨€¥₿%0123456789";
+  for(let i=0;i<13;i++){let s="";for(let k=0;k<64;k++)s+=G[Math.floor(rnd(i*97+k)*G.length)];
+    rain+=`<div class="col" style="left:${20+i*80}px;transform:translateY(${-rnd(i+5)*700}px);color:${i%3===1?"rgba(95,211,196,.08)":"rgba(212,175,55,.10)"}">${s}</div>`;}
+  let segs="";for(let i=1;i<=P.of;i++)segs+=`<div style="flex:1;height:8px;border-radius:4px;background:${i<P.ep?"#d4af37":i===P.ep?"#f0cf6a":"#2a2a30"};${i===P.ep?"box-shadow:0 0 16px rgba(240,207,106,.8)":""}"></div>`;
+  st.innerHTML=rain+`
+  <div class="abs" style="inset:0;background:repeating-linear-gradient(0deg,rgba(240,207,106,.03) 0 2px,transparent 2px 6px)"></div>
+  <div class="corner" style="left:40px;top:250px;border-top-width:5px;border-left-width:5px"></div>
+  <div class="corner" style="right:40px;top:250px;border-top-width:5px;border-right-width:5px"></div>
+  <div class="corner" style="left:40px;top:1560px;border-bottom-width:5px;border-left-width:5px"></div>
+  <div class="corner" style="right:40px;top:1560px;border-bottom-width:5px;border-right-width:5px"></div>
+  <div class="abs mono c" style="top:300px;font-size:26px;letter-spacing:.3em;color:#a39d90;padding-left:.3em">A DOCUMENTARY BY THE GOLD COUNCIL</div>
+  <div class="abs serif c g" style="top:345px;font-size:76px;line-height:1;letter-spacing:.02em;text-shadow:0 0 30px rgba(240,207,106,.35)">ESCAPE THE MATRIX</div>
+  <div class="abs mono" style="left:100px;right:100px;top:455px;display:flex;justify-content:space-between;font-size:26px;letter-spacing:.14em;color:#cfc7b6"><span>${P.part}</span><span class="g">${P.ep?("EP "+String(P.ep).padStart(2,"0")+"/"+P.of):(P.tag||"CLIP")}</span></div>
+  <div class="abs" style="left:100px;right:100px;top:498px;display:flex;gap:8px">${segs}</div>
+  <div class="abs c" style="left:70px;right:70px;top:540px;font-weight:700;font-size:50px;line-height:1.16">${P.hook}</div>
+  <div class="abs" style="left:-2px;right:-2px;top:${P.wy-3}px;height:${P.wh+6}px;border-top:3px solid rgba(212,175,55,.55);border-bottom:3px solid rgba(212,175,55,.55);background:#000"></div>
+  <div class="abs mono c" style="top:1500px;font-size:26px;letter-spacing:.16em;color:#8f8a7e;padding-left:.16em">${P.foot||"FOLLOW @THE.GOLDCOUNCIL · FULL FILM: LINK IN BIO"}</div>`;
+}else{ // end card overlay over the caption area
+  st.innerHTML=`<div class="abs" style="left:0;right:0;top:${P.y}px;height:${P.h}px;background:rgba(5,5,7,.94)"></div>
+  <div class="abs mono c g" style="top:${P.y+30}px;font-size:30px;letter-spacing:.24em;padding-left:.24em">${P.k}</div>
+  <div class="abs c" style="left:80px;right:80px;top:${P.y+80}px;font-weight:700;font-size:54px;line-height:1.15">${P.t}</div>
+  <div class="abs c" style="top:${P.y+P.h-90}px"><span class="pill">${P.p}</span></div>`;
+}
+</script></body></html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Series story card</title>
+__FONTS__
+<link rel="stylesheet" href="base3.css">
+</head><body>
+<div id="stage">
+  <div class="abs mono c" style="top:600px;font-size:34px;letter-spacing:.22em;color:#cfc7b6;padding-left:.22em" id="kicker"></div>
+  <div class="abs c" style="top:680px"><span id="big" class="serif sweep" style="display:inline-block;font-size:120px;line-height:1.05"></span></div>
+  <div id="q" class="abs ur c" style="left:100px;right:100px;top:860px;font-size:74px;line-height:1.15"></div>
+  <div id="e" class="abs en c" style="left:100px;right:100px;top:1160px;font-size:38px;line-height:1.3"></div>
+  <div class="abs c" style="top:1290px"><span id="pill" class="pill" style="font-size:38px"></span></div>
+</div>
+<script>
+const DUR=1, BPM=100, CUTS=[], HITS=[], PULSE=[];
+const P=JSON.parse(decodeURIComponent(location.hash.slice(1)));
+const SERIES={part:P.part,of:P.of||12,title:P.title||"ESCAPE THE MATRIX"};
+</script>
+<script src="base3.js"></script>
+<script>
+buildChrome(P.label||"ESCAPE THE MATRIX");
+$("kicker").textContent=P.kicker; $("big").textContent=P.big; $("q").innerHTML=P.q; if(P.qs)$("q").style.fontSize=P.qs+"px"; $("e").textContent=P.e; $("pill").textContent=P.pill;
+function scenes(){}
+render(0.5); $("flash").style.opacity=0;
+</script></body></html>
