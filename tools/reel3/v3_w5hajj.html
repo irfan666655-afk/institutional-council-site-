@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Viral: Hajj kitne tola ka?</title>
+__FONTS__
+<link rel="stylesheet" href="base3.css">
+<style>
+.row{position:absolute;left:130px;right:130px;display:flex;justify-content:space-between;align-items:baseline;font-family:'IBM Plex Sans',sans-serif;font-weight:700;font-size:50px;color:#f1eadc;border-bottom:2px solid rgba(212,175,55,.25);padding-bottom:12px}
+.row b{font-family:'JetBrains Mono',monospace;font-size:52px;color:#f0cf6a;white-space:nowrap}
+.grid{position:absolute;left:60px;right:60px;text-align:center;line-height:0}
+</style>
+</head><body>
+<div id="stage">
+  <div id="s1" class="scene">
+    <div class="abs ur c" style="top:640px;font-size:78px;line-height:1.1">Sarkari Hajj kitne</div>
+    <div class="abs c" style="top:735px"><span class="serif sweep" style="display:inline-block;font-size:150px;line-height:1.1">TOLA KA?</span></div>
+    <div class="abs c" style="top:960px"><span id="q1" style="display:inline-block"></span></div>
+    <div class="abs en c" style="top:1210px;font-size:38px">How many tola of gold pay for a government Hajj package?</div>
+  </div>
+  <div id="s2" class="scene">
+    <div class="abs mono c" style="top:640px;font-size:56px;letter-spacing:.2em;color:#d4af37;padding-left:.2em">HAJJ 2018</div>
+    <div class="row" style="top:740px"><span>Sarkari scheme</span><b>Rs 280,000</b></div>
+    <div class="row" style="top:840px"><span>1 tola (Jan 2018)</span><b>Rs 56,200</b></div>
+    <div class="grid" style="top:960px" id="g2"></div>
+    <div class="abs c" style="top:1170px"><span id="s2u" class="ur" style="display:inline-block;font-size:80px">Lagbhag <span class="g">5</span> tola</span></div>
+  </div>
+  <div id="s3" class="scene">
+    <div class="abs mono c" style="top:640px;font-size:56px;letter-spacing:.2em;color:#d4af37;padding-left:.2em">HAJJ 2027</div>
+    <div class="row" style="top:740px"><span>Sarkari, 40 din</span><b>Rs 1,200,000</b></div>
+    <div class="row" style="top:840px"><span>1 tola (Oct 2026)</span><b>Rs 432,200</b></div>
+    <div class="grid" style="top:960px" id="g3"></div>
+    <div class="abs c" style="top:1170px"><span id="s3u" class="ur" style="display:inline-block;font-size:84px">Ab <span class="sweep">2.8 tola</span></span></div>
+  </div>
+  <div id="s4" class="scene">
+    <div class="abs c" style="top:670px"><span id="s4a" class="ur" style="display:inline-block;font-size:76px">Rupee mein Hajj <span class="g">4.3 guna</span></span></div>
+    <div class="abs c" style="top:765px"><span id="s4c" class="ur" style="display:inline-block;font-size:76px">mehnga hua.</span></div>
+    <div class="abs c" style="top:880px"><span id="s4b" class="ur" style="display:inline-block;font-size:76px">Tola mein ginein to</span></div>
+    <div class="abs c" style="top:975px"><span id="s4d" class="ur" style="display:inline-block;font-size:104px;white-space:nowrap"><span class="sweep">44% kam.</span></span></div>
+    <div class="abs en c" style="left:90px;right:90px;top:1130px;font-size:34px;line-height:1.3">Government scheme, 2018 vs 2027: +329% in rupees,<br>but 44% fewer tola.</div>
+    <div class="abs en c" style="left:80px;right:80px;top:1250px;font-size:25px;color:#8f8a7e;line-height:1.45">Hajj: APP (14 Jun 2018, North region), Arab News (10 Aug 2026, 40-day package)<br>Tola: ProPakistani (Jan 2018), Minute Mirror (20 Oct 2026)</div>
+  </div>
+  <div id="s5" class="scene">
+    <div id="s5t" class="abs ur c" style="left:70px;right:70px;top:640px;font-size:62px;line-height:1.2"></div>
+    <div class="abs mono c" style="top:950px;font-size:30px;letter-spacing:.3em;color:#cfc7b6;padding-left:.3em">FROM THE DOCUMENTARY</div>
+    <div class="abs c" style="top:1000px"><span id="s5m" class="serif sweep" style="display:inline-block;font-size:80px;line-height:1.1">ESCAPE THE MATRIX</span></div>
+    <div id="s5f" class="abs c" style="top:1170px;opacity:0"><span class="pill" style="font-size:32px">PREMIERE 1 NOV · SHAAM 7 BAJE</span></div>
+  </div>
+</div>
+<script>
+const DUR=12, BPM=100, CUTS=[2.4,4.8,7.2,9.6], HITS=[0,4.8,7.2], PULSE=[[4.8,9.6]];
+</script>
+<script src="base3.js"></script>
+<script src="w5_common.js"></script>
+<script>
+buildChrome("CASE FILE · TOLA vs HAJJ");
+$("q1").innerHTML=icon("plane",320,0)+'<span class="mono" style="font-size:150px;color:#f0cf6a;vertical-align:top;line-height:200px">?</span>';
+$("g2").innerHTML=barGrid(4.98,8,110);
+$("g3").innerHTML=barGrid(2.78,8,110);
+$("s5t").innerHTML=W("Ghar ke us buzurg ko bhejo")+'<br>'+W("jo")+' <span class="w g" style="white-space:nowrap">Hajj ki niyyat</span><br>'+W("rakhte hain.");
+function scenes(t,f){
+  $("s1").style.opacity=t<2.4?1:0;
+  $("q1").style.transform=`rotate(${Math.sin(t*6)*2}deg)`;
+  $("s2").style.opacity=on(t,2.4,4.8)?1:0;
+  showBars("g2",t,2.7,0.2); pop("s2u",t,4.2);
+  $("s3").style.opacity=on(t,4.8,7.2)?1:0;
+  showBars("g3",t,5.0,0.25); pop("s3u",t,6.0);
+  $("s4").style.opacity=on(t,7.2,9.6)?1:0;
+  pop("s4a",t,7.2); pop("s4c",t,7.35); pop("s4b",t,7.8); pop("s4d",t,8.1);
+  $("s5").style.opacity=t>=9.6?1:0;
+  words("s5t",t,9.6,0.09); pop("s5m",t,10.5); $("s5f").style.opacity=clamp((t-11.0)/.2);
+}
+render(0);
+</script></body></html>

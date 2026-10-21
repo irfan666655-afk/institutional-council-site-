@@ -1,6 +1,6 @@
 """Render a vertical clip stitched from one or more film segments (trailer, highlights).
 Usage: render_clip.py <doc dir> <spec.json>
-spec: {"name":..., "segments":[[a,b],...], "frame":"frames/x.png", "end":"frames/y.png", "tail":3.5}"""
+spec: {"name":..., "segments":[[a,b],...], "frame":"frames/x.png", "end":"frames/y.png", "tail":3.5, optional "film":"a.mp4", "film_offset":140}"""
 import json, sys, re, subprocess, pathlib
 D = pathlib.Path(sys.argv[1]); S = json.load(open(sys.argv[2]))
 cues = json.load(open(D / "cues_fixed.json"))
@@ -45,7 +45,8 @@ fc += (f"[vc]tpad=stop_mode=clone:stop_duration={tail}[v];[0:v][v]overlay=0:700:
        f"[c]ass={assf}[d];[1:v]format=rgba[e];[d][e]overlay=0:0:enable='gte(t,{dur})'[vo];"
        f"[ac]apad=pad_dur={tail},loudnorm=I=-14:TP=-1.0:LRA=11,aresample=48000[ao]")
 segin = []
-for a, b in S["segments"]: segin += ["-ss", str(a), "-t", str(b - a), "-i", str(D / "film.mp4")]
+FILM = D / S.get("film", "film.mp4"); OFF = float(S.get("film_offset", 0))  # partial film: file time 0 = film time OFF
+for a, b in S["segments"]: segin += ["-ss", str(a - OFF), "-t", str(b - a), "-i", str(FILM)]
 cmd = ["ffmpeg", "-y", "-loglevel", "error",
        "-loop", "1", "-framerate", "24", "-i", str(D / S["frame"]), "-loop", "1", "-framerate", "24", "-i", str(D / S["end"])] + segin + [
        "-filter_complex", fc, "-map", "[vo]", "-map", "[ao]", "-t", str(total), "-r", "24",

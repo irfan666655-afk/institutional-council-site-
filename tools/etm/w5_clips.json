@@ -1,0 +1,12 @@
+[
+ {"name":"w5_ruler","segments":[[141.0,170.3]],"tail":3.5,"film":"a.mp4","film_offset":140,
+  "part":"FROM THE DOCUMENTARY · EP 02",
+  "hook":"Tankhwah <span class='g'>10%</span> barhi, mehngai <span class='g'>12%</span>. Ameer hue ya ghareeb?",
+  "end":{"k":"ESCAPE THE MATRIX · PREMIERE","t":"Itwar, 1 November · <span class='g'>shaam 7 baje</span>","p":"FOLLOW KAREIN · MISS NA HO"},
+  "foot":"FOLLOW @THE.GOLDCOUNCIL · PREMIERE 1 NOV, 7 PM"},
+ {"name":"w5_dollardry","segments":[[685.0,723.3]],"tail":3.5,"film":"b.mp4","film_offset":680,
+  "part":"FROM THE DOCUMENTARY · EP 06",
+  "hook":"Pakistan ka asal khatra collapse nahi. <span class='g'>Dollar ki kami</span> hai.",
+  "end":{"k":"ESCAPE THE MATRIX · PREMIERE","t":"Itwar, 1 November · <span class='g'>shaam 7 baje</span>","p":"FOLLOW KAREIN · MISS NA HO"},
+  "foot":"FOLLOW @THE.GOLDCOUNCIL · PREMIERE 1 NOV, 7 PM"}
+]
