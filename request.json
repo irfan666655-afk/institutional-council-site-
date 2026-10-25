@@ -1,0 +1,22 @@
+{
+ "requested_at": "2026-10-25T14:20:00Z",
+ "from": "2026-04-01T00:00:00Z",
+ "instruments": [
+  {"key": "XAUUSD", "duka": "xauusd", "yahoo": "GC=F"},
+  {"key": "XAGUSD", "duka": "xagusd", "yahoo": "SI=F"},
+  {"key": "BRENT", "duka": "brentcmdusd", "yahoo": "BZ=F"},
+  {"key": "WTI", "duka": "lightcmdusd", "yahoo": "CL=F"},
+  {"key": "DXY", "duka": "dollaridxusd", "yahoo": "DX-Y.NYB"},
+  {"key": "EURUSD", "duka": "eurusd", "yahoo": "EURUSD=X"},
+  {"key": "GBPUSD", "duka": "gbpusd", "yahoo": "GBPUSD=X"},
+  {"key": "USDJPY", "duka": "usdjpy", "yahoo": "JPY=X"},
+  {"key": "USDCHF", "duka": "usdchf", "yahoo": "CHF=X"},
+  {"key": "AUDUSD", "duka": "audusd", "yahoo": "AUDUSD=X"},
+  {"key": "NZDUSD", "duka": "nzdusd", "yahoo": "NZDUSD=X"},
+  {"key": "USDCAD", "duka": "usdcad", "yahoo": "CAD=X"},
+  {"key": "BTCUSD", "duka": "btcusd", "yahoo": "BTC-USD"},
+  {"key": "ETHUSD", "duka": "ethusd", "yahoo": "ETH-USD"},
+  {"key": "US500", "duka": "usa500idxusd", "yahoo": "^GSPC"},
+  {"key": "US10Y", "duka": null, "yahoo": "^TNX"}
+ ]
+}
