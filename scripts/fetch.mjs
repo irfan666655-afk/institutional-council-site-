@@ -34,10 +34,22 @@ async function yahoo(inst, interval) {
   res.timestamp.forEach((t, i) => { if (q.open[i] != null && q.close[i] != null) rows.push({ timestamp: t * 1000, open: q.open[i], high: q.high[i], low: q.low[i], close: q.close[i], volume: q.volume?.[i] }); });
   return merge(p, rows);
 }
+// Latest price: last completed 1-minute bid/ask bar of the past 3 hours (fresher than the last H1 candle).
+const latest = fs.existsSync('data/latest.json') ? JSON.parse(fs.readFileSync('data/latest.json', 'utf8')) : {};
+async function last(inst) {
+  const f = new Date(Date.now() - 3 * 3600e3);
+  const opt = side => ({ instrument: inst.duka, dates: { from: f, to: new Date() }, timeframe: 'm1', priceType: side, format: 'json', ignoreFlats: true, retryCount: 2 });
+  const [b, a] = await Promise.all([getHistoricRates(opt('bid')), getHistoricRates(opt('ask'))]);
+  if (!b.length || !a.length) return 'no recent ticks (market closed?)';
+  const B = b[b.length - 1], A = a.find(x => x.timestamp === B.timestamp) || a[a.length - 1];
+  latest[inst.key] = { t: new Date(B.timestamp).toISOString(), bid: B.close, ask: A.close, mid: (B.close + A.close) / 2 };
+  return latest[inst.key].t;
+}
 async function one(inst) {
   const s = status.items[inst.key] = {};
   for (const [label, fn] of [['duka_bid', () => duka(inst, 'bid')], ['duka_ask', () => duka(inst, 'ask')],
-                             ['yahoo_h1', () => yahoo(inst, '1h')], ['yahoo_d1', () => yahoo(inst, '1d')]]) {
+                             ['yahoo_h1', () => yahoo(inst, '1h')], ['yahoo_d1', () => yahoo(inst, '1d')],
+                             ['duka_last', () => last(inst)]]) {
     if ((label.startsWith('duka') && !inst.duka) || (label.startsWith('yahoo') && !inst.yahoo)) continue;
     try { s[label] = await fn(); } catch (e) { s[label] = 'ERROR: ' + String(e.message || e).slice(0, 200); }
     console.log(inst.key, label, s[label]);
@@ -45,5 +57,6 @@ async function one(inst) {
 }
 const queue = req.instruments.filter(i => !req.only || req.only.includes(i.key));
 await Promise.all(Array.from({ length: 4 }, async () => { while (queue.length) await one(queue.shift()); }));
+fs.writeFileSync('data/latest.json', JSON.stringify(latest, null, 1));
 status.seconds = Math.round((Date.now() - t0) / 1000);
 fs.writeFileSync('status.json', JSON.stringify(status, null, 1));
