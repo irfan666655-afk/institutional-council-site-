@@ -1,0 +1,102 @@
+{
+ "requested_at": "2026-10-25T14:20:00Z",
+ "ran_at": "2026-10-25T14:11:16.847Z",
+ "from": "2026-04-01T00:00:00Z",
+ "to": "2026-10-25T14:11:16.847Z",
+ "items": {
+  "XAUUSD": {
+   "duka_bid": 3367,
+   "duka_ask": 3367,
+   "yahoo_h1": 3221,
+   "yahoo_d1": 143
+  },
+  "XAGUSD": {
+   "duka_bid": 3367,
+   "duka_ask": 3367,
+   "yahoo_h1": 3218,
+   "yahoo_d1": 143
+  },
+  "BRENT": {
+   "duka_bid": 3075,
+   "duka_ask": 3075,
+   "yahoo_h1": 3198,
+   "yahoo_d1": 143
+  },
+  "WTI": {
+   "duka_bid": 3367,
+   "duka_ask": 3367,
+   "yahoo_h1": 3213,
+   "yahoo_d1": 143
+  },
+  "DXY": {
+   "duka_bid": 3087,
+   "duka_ask": 3087,
+   "yahoo_h1": 3345,
+   "yahoo_d1": 143
+  },
+  "EURUSD": {
+   "duka_bid": 3549,
+   "duka_ask": 3549,
+   "yahoo_h1": 3448,
+   "yahoo_d1": 149
+  },
+  "GBPUSD": {
+   "duka_bid": 3549,
+   "duka_ask": 3549,
+   "yahoo_h1": 3449,
+   "yahoo_d1": 149
+  },
+  "USDJPY": {
+   "duka_bid": 3549,
+   "duka_ask": 3549,
+   "yahoo_h1": 3429,
+   "yahoo_d1": 149
+  },
+  "USDCHF": {
+   "duka_bid": 3549,
+   "duka_ask": 3549,
+   "yahoo_h1": 3426,
+   "yahoo_d1": 149
+  },
+  "AUDUSD": {
+   "duka_bid": 3549,
+   "duka_ask": 3549,
+   "yahoo_h1": 3447,
+   "yahoo_d1": 149
+  },
+  "NZDUSD": {
+   "duka_bid": 3549,
+   "duka_ask": 3549,
+   "yahoo_h1": 3448,
+   "yahoo_d1": 149
+  },
+  "USDCAD": {
+   "duka_bid": 3549,
+   "duka_ask": 3549,
+   "yahoo_h1": 3448,
+   "yahoo_d1": 149
+  },
+  "BTCUSD": {
+   "duka_bid": 4982,
+   "duka_ask": 4982,
+   "yahoo_h1": 4983,
+   "yahoo_d1": 208
+  },
+  "ETHUSD": {
+   "duka_bid": 4982,
+   "duka_ask": 4982,
+   "yahoo_h1": 4983,
+   "yahoo_d1": 208
+  },
+  "US500": {
+   "duka_bid": 3363,
+   "duka_ask": 3363,
+   "yahoo_h1": 984,
+   "yahoo_d1": 143
+  },
+  "US10Y": {
+   "yahoo_h1": 983,
+   "yahoo_d1": 143
+  }
+ }
+}
