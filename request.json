@@ -1,5 +1,5 @@
 {
- "requested_at": "2026-10-25T14:40:00Z",
+ "requested_at": "2026-10-25T14:35:25+00:00",
  "from": "2026-04-01T00:00:00Z",
  "instruments": [
   {
@@ -83,5 +83,11 @@
    "yahoo": "^TNX"
   }
  ],
- "note": "Bump requested_at to refresh. Set \"full\": true to re-download everything from \"from\"; \"only\": [keys] limits a run."
+ "note": "Bump requested_at to refresh. Set \"full\": true to re-download everything from \"from\"; \"only\": [keys] limits a run.",
+ "only": [
+  "XAUUSD",
+  "XAGUSD",
+  "EURUSD",
+  "BTCUSD"
+ ]
 }
